@@ -1,0 +1,26 @@
+// Site Header
+
+.site-header {
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.nav {
+  text-align: right;
+
+  li {
+    display: inline;
+    line-height: 4;
+    margin-left: 25px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+// End Site Header

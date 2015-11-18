@@ -7,8 +7,8 @@ Stop Suap! Berbagi cerita tentang pengalaman yang berhubungan dengan korupsi.
 - Rails 4.2.1
 - PostgeSQL
 
-## LICENSE
-Copyright (C) 2015 Reza Jatnika <rezajatnika@gmail.com>
+## License
+Copyright (C) 2015 Reza Jatnika &lt;rezajatnika@gmail.com&gt;
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as

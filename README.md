@@ -6,6 +6,8 @@ Stop Suap! Berbagi cerita tentang pengalaman yang berhubungan dengan korupsi, ko
 
 ## Dependencies
 
+[![Join the chat at https://gitter.im/rezajatnika/stop_suap](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rezajatnika/stop_suap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 - Ruby version 2.2.3
 - Rails version 4.2.1
 - PostgeSQL

@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 
+  # User sign up
+  get 'signup', to: 'users#new'
+  post 'signup', to: 'users#create'
+
   # Mockups
   get 'mockups/index'
   get 'mockups/posts'

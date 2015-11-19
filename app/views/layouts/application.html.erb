@@ -10,18 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header container class="site-header">
-    <div row>
-      <h1 column="4" class="logo">Stop Suap</h1>
-      <nav column="8" class="nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <%= render 'layouts/header' %>
   <main container class="site-content">
     <%= yield %>
   </main>

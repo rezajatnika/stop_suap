@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
     # We are gonna use BCrypt
     c.crypto_provider = Authlogic::CryptoProviders::BCrypt
 
+    # Using email for login field
+    c.login_field = :email
+
     # Some validations
     c.merge_validates_length_of_password_field_options(in: 8..30)
 

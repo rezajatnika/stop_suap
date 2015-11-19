@@ -1,0 +1,71 @@
+// Site Header
+
+.site-header {
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.nav {
+  text-align: right;
+
+  li {
+    display: inline;
+    line-height: 4;
+    margin-left: 25px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+// End Site Header
+
+// Masthead
+
+.masthead {
+  background-color: #eee;
+  padding: 50px 0;
+}
+
+@media (min-width: 48em) {
+  .masthead {
+    padding: 100px 0;
+  }
+}
+
+.masthead-title {
+  margin-top: 0;
+}
+
+// End Masthead
+
+
+// Site Content
+
+.site-content {
+  padding: 50px 0;
+}
+
+// End Site Content
+
+// Form
+
+.form-field {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+// Site Footer
+
+.site-footer {
+  border-top: 1px solid #eee;
+  font-size: .875em;
+  padding-top: 10px;
+}
+
+// End Site Footer

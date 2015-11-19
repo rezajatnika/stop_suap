@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20151119175057) do
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",                        null: false
     t.string   "email",                           null: false
     t.string   "crypted_password",                null: false
     t.string   "password_salt",                   null: false
@@ -36,6 +35,5 @@ ActiveRecord::Schema.define(version: 20151119175057) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
-  add_index "users", ["username"], name: "index_users_on_username", using: :btree
 
 end

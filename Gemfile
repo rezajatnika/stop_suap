@@ -26,3 +26,10 @@ group :development do
   gem 'hirb',          '0.7.3'
   gem 'quiet_assets',  '1.1.0'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
+
+# Ruby version
+ruby '2.2.3'

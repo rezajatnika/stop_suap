@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   # Associations
-  has_many :stories, dependent: :destroy
+  has_many :stories
 
   # Acts as authentic for authlogic
   acts_as_authentic do |c|

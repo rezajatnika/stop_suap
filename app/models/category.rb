@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
   # Associations
-  has_many :stories, dependent: :destroy
+  has_many :stories
 end

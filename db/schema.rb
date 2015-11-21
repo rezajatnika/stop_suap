@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151121063521) do
+ActiveRecord::Schema.define(version: 20151121081107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,15 +22,32 @@ ActiveRecord::Schema.define(version: 20151121063521) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "cities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "province_id"
+  end
+
+  add_index "cities", ["province_id"], name: "index_cities_on_province_id", using: :btree
+
   create_table "locations", force: :cascade do |t|
     t.integer  "story_id"
-    t.string   "city"
-    t.string   "province"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "city_id"
+    t.integer  "province_id"
+  end
+
+  add_index "locations", ["city_id"], name: "index_locations_on_city_id", using: :btree
+  add_index "locations", ["province_id"], name: "index_locations_on_province_id", using: :btree
+  add_index "locations", ["story_id"], name: "index_locations_on_story_id", using: :btree
+
+  create_table "provinces", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "locations", ["story_id"], name: "index_locations_on_story_id", using: :btree
 
   create_table "stories", force: :cascade do |t|
     t.integer  "category_id"
@@ -66,4 +83,7 @@ ActiveRecord::Schema.define(version: 20151121063521) do
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
 
+  add_foreign_key "cities", "provinces"
+  add_foreign_key "locations", "cities"
+  add_foreign_key "locations", "provinces"
 end

@@ -27,4 +27,8 @@ class UserTest < ActiveSupport::TestCase
     @user.password_confirmation = 'verylongpasswordthathewontevenremember'
     assert_not @user.valid?
   end
+
+  test 'should have many stories' do
+    assert @user.respond_to?(:stories)
+  end
 end

@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   post 'signup', to: 'users#create'
 
+  # Resources
+  resources :stories do
+    resource :location
+  end
+
   # Mockups
   get 'mockups/index'
   get 'mockups/posts'

@@ -1,0 +1,26 @@
+<div row>
+  <div column="6 +3">
+    <h3><%= @story.title %></h3>
+    <p>
+      <span class="label bg--error"><%= @story.category.name %></span>
+      <span class="label">Rp. <%= @story.amount.to_i %></span>
+    </p>
+    <small>
+      Reported on <%= @story.created_at.strftime('%e %B, %Y') %> from <%= @story.location.city.name %>
+  </small>
+    <div class="content_container">
+      <%= @story.content %>
+    </div>
+    <div class="comments">
+      <h4>Your thoughts</h4>
+      <%= form_tag do %>
+        <div class="form-field">
+          <%= text_area_tag(:comment) %>
+        </div>
+        <div class="form-field">
+          <%= button_tag 'Submit', class: 'button button--sm button--pill', disabled: true %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

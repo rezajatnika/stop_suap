@@ -11,6 +11,8 @@
  * file per style scope.
  *
  *= require concise/concise.scss
+ *= require pickadate.js/default.css
+ *= require pickadate.js/default.date.css
  *= require_tree .
  *= require_self
  */

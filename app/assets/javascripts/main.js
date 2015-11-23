@@ -5,3 +5,13 @@ $(document).on('ready page:load', function() {
     $(".alert-flash").hide();
   });
 });
+
+// Pick a date
+$(document).ready(function() {
+  $('#story_event_date').pickadate({
+    today: '',
+    clear: '',
+    close: '',
+    max: new Date()
+  });
+});

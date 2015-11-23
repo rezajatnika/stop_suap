@@ -16,7 +16,7 @@
 
         <div class="form-field">
           <%= f.label :content, 'Summary of your story' %>
-          <%= f.text_area :content %>
+          <%= f.text_area :content, rows: 7 %>
         </div>
 
         <div class="form-field">
@@ -29,7 +29,7 @@
         <legend>When and where it happens?</legend>
         <div class="form-field">
           <%= f.label :event_date, 'When it happens?' %>
-          <%= f.date_field :event_date %>
+          <%= f.text_field :event_date %>
         </div>
         <%= fields_for :location, @location do |field| %>
           <div class="form-field">
@@ -40,6 +40,12 @@
           <div class="form-field">
             <%= field.label :city_id %>
             <%= field.grouped_collection_select :city_id, Province.all.order(:name), :cities, :name, :id, :name, prompt: true %>
+          </div>
+        <% end %>
+        <% unless current_user %>
+          <div class="form-field">
+            <%= f.label :email, 'Your email address' %>
+            <%= f.text_field :email %>
           </div>
         <% end %>
       </fieldset>

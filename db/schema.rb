@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151121105610) do
+ActiveRecord::Schema.define(version: 20151123012000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,10 +54,10 @@ ActiveRecord::Schema.define(version: 20151121105610) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "content"
-    t.float    "amount"
-    t.datetime "event_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.float    "amount",      default: 0.0, null: false
+    t.date     "event_date"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   add_index "stories", ["category_id"], name: "index_stories_on_category_id", using: :btree
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20151121105610) do
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
 
+  add_foreign_key "cities", "provinces", on_delete: :cascade
   add_foreign_key "locations", "stories", on_delete: :cascade
   add_foreign_key "stories", "categories", on_delete: :cascade
   add_foreign_key "stories", "users", on_delete: :cascade

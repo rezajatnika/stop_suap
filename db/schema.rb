@@ -54,11 +54,10 @@ ActiveRecord::Schema.define(version: 20151123121353) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "content"
-    t.float    "amount",      default: 0.0,  null: false
-    t.date     "event_date"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.boolean  "anonymous",   default: true
+    t.float    "amount"
+    t.datetime "event_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "email"
   end
 

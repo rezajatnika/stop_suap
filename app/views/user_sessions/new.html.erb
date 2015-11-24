@@ -15,10 +15,10 @@
           <%= link_to 'Forgot password?', '#' %>
         <% end %>
       </div>
-      <%= f.button 'Login', class: 'button--xsm button--pill' %>
+      <%= f.submit 'Login' %>
     <% end %>
     <hr>
-    <p>New to Stop Suap? <a href="#">Sign up here!</a></p>
+    <p>New to Stop Suap? <%= link_to 'Sign up here!', signup_path %></p>
   </div>
 </div>
 

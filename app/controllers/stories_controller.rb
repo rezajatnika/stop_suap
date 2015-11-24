@@ -1,25 +1,29 @@
 class StoriesController < ApplicationController
   def new
-    @story = Story.new
+    @story = current_user ? current_user.stories.new : Story.new
     @location = @story.build_location
   end
 
   def show
     @story = Story.find(params[:id])
+    logger.info("Showing story: #{@story}")
   end
 
   def index
-    @stories = Story.all
+    @stories = Story.includes(:category, location: [:city, :province]).all
+    logger.info("Showing #{@stories.size} stories")
   end
 
   def create
-    @story = Story.new(story_params)
-    @story.user = current_user
+    @story = current_user ?
+      current_user.stories.new(story_params) : Story.new(story_params)
     @location = @story.build_location(location_params)
 
     if @story.save && @location.save
-      redirect_to root_path
+      logger.info("Story created: #{@story}")
+      redirect_to root_path, success: 'Report created!'
     else
+      logger.info("Fail create story: #{@story}")
       render :new
     end
   end
@@ -27,9 +31,8 @@ class StoriesController < ApplicationController
   private
 
   def story_params
-    params.require(:story).permit(
-      :title, :content, :amount, :event_date, :category_id, :email
-    )
+    attr = [:title, :content, :amount, :event_date, :category_id, :email]
+    params.require(:story).permit(*attr)
   end
 
   def location_params

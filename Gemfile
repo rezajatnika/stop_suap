@@ -25,6 +25,7 @@ group :development do
   gem 'thin',          '1.6.4'
   gem 'hirb',          '0.7.3'
   gem 'quiet_assets',  '1.1.0'
+  gem 'faker'
 end
 
 group :production do

@@ -1,6 +1,5 @@
 class Story < ActiveRecord::Base
   before_save :set_email, :set_user
-  after_create :set_anonymous
 
   # Associations
   has_one :location
@@ -16,10 +15,5 @@ class Story < ActiveRecord::Base
 
   def set_email
     self.email ||= self.user.email
-  end
-
-  def set_anonymous
-    self.anonymous = false if self.email == self.user.email
-    save
   end
 end

@@ -19,9 +19,7 @@ class Story < ActiveRecord::Base
   end
 
   def set_anonymous
-    if self.email == self.user.email
-      self.anonymous = false
-    end
+    self.anonymous = false if self.email == self.user.email
     save
   end
 end

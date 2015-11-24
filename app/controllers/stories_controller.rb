@@ -17,8 +17,6 @@ class StoriesController < ApplicationController
     @story.user = current_user
     @location = @story.build_location(location_params)
 
-    byebug
-
     if @story.save && @location.save
       redirect_to root_path
     else

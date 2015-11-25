@@ -21,7 +21,7 @@
 
         <div class="form-field">
           <%= f.label :amount, "How much you've paid?" %>
-          <%= f.number_field :amount %>
+          <%= f.text_field :amount %>
         </div>
       </fieldset>
 
@@ -49,6 +49,7 @@
           </div>
         <% end %>
       </fieldset>
+
       <%= f.submit %>
     <% end %>
   </div>

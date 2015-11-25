@@ -1,0 +1,12 @@
+<div class="comments">
+  <h4>Your thoughts</h4>
+  <%= form_tag do %>
+    <div class="form-field">
+      <%= text_area_tag(:comment) %>
+    </div>
+
+    <div class="form-field">
+      <%= button_tag 'Submit', class: 'button button--sm button--pill', disabled: true %>
+    </div>
+  <% end %>
+</div>

@@ -5,7 +5,7 @@ class CreateStories < ActiveRecord::Migration
       t.belongs_to :user, index: true
       t.string :title
       t.text :content
-      t.float :amount
+      t.integer :amount
       t.datetime :event_date
 
       t.timestamps null: false

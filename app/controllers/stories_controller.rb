@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
   def new
-    @story = current_user ? current_user.stories.new : Story.new
+    @story    = current_user ? current_user.stories.new : Story.new
     @location = @story.build_location
   end
 
@@ -18,12 +18,13 @@ class StoriesController < ApplicationController
     @story = current_user ?
       current_user.stories.new(story_params) : Story.new(story_params)
     @location = @story.build_location(location_params)
+    byebug
 
-    if @story.save && @location.save
+    if @story.save
       logger.info("Story created: #{@story}")
-      redirect_to root_path, success: 'Report created!'
+      redirect_to @story, success: 'Report created!'
     else
-      logger.info("Fail create story: #{@story}")
+      logger.info("Fail create story: #{@story.errors.full_messages}")
       render :new
     end
   end

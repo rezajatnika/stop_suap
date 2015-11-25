@@ -6,4 +6,7 @@ class Category < ActiveRecord::Base
   def self.list_category
     Category.all.collect { |cat| [cat.name, cat.id] }
   end
+
+  # Validations
+  validates :name, presence: true
 end

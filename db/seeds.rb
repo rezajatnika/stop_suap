@@ -32,14 +32,17 @@ Category.create(
   ]
 )
 
-20.times do
-  User.order('RANDOM()').first.stories.create(
+70.times do |user|
+  user = User.order('RANDOM()').first
+  user.stories.create(
     title: Faker::Lorem.sentence,
-    category_id: Category.order('RANDOM()').first.id,
+    category: Category.order('RANDOM()').first,
     content: Faker::Lorem.paragraph,
-    amount: (rand(10) + 1) * 100_000,
-    event_date: Date.today
+    amount: 100_000,
+    event_date: Date.today,
+    email: user.email
   )
+  puts "Story from #{user.email} created"
 end
 
 Story.all.each do |story|

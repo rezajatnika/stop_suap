@@ -5,15 +5,17 @@ $("a.alert-close").click(function(event) {
 });
 
 // Pick a date
-$('#story_event_date').pickadate({
-  today: '',
-  clear: '',
-  close: '',
-  max: new Date()
+$(document).on('ready', function() {
+  $('#story_event_date').pickadate({
+    today: '',
+    clear: '',
+    close: '',
+    max: new Date()
+  });
 });
 
 // Currency
-$('input[data-role=money]').autoNumeric('init', {
+$('#story_amount').autoNumeric('init', {
   aSep: '_',
   vMin: '0',
   vMax: '999999999'

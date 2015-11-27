@@ -80,6 +80,23 @@
   border-top: 1px solid #eee;
   font-size: .875em;
   padding-top: 10px;
+  padding-bottom: 10px;
+
+  ul.right {
+    text-align: right;
+    li {
+      display: inline;
+      margin-left: 20px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
 // End Site Footer

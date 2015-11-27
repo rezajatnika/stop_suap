@@ -31,7 +31,7 @@
           <%= f.label :event_date, 'When it happens?' %>
           <%= f.text_field :event_date %>
         </div>
-        <%= fields_for :location, @location do |field| %>
+        <%= f.fields_for :location do |field| %>
           <div class="form-field">
             <%= field.label :province_id %>
             <%= field.collection_select :province_id, Province.all, :id, :name, prompt: true %>
@@ -42,6 +42,7 @@
             <%= field.grouped_collection_select :city_id, Province.all.order(:name), :cities, :name, :id, :name, prompt: true %>
           </div>
         <% end %>
+
         <% unless current_user %>
           <div class="form-field">
             <%= f.label :email, 'Your email address' %>

@@ -3,7 +3,6 @@ class Story < ActiveRecord::Base
 
   # Associations
   has_one :location
-  validates_associated :location
   accepts_nested_attributes_for :location, reject_if: :all_blank
 
   belongs_to :user
@@ -14,12 +13,10 @@ class Story < ActiveRecord::Base
   validates :category,   presence: true
   validates :content,    presence: true
   validates :amount,     presence: true
+  validates :location,   presence: true
   validates :event_date, presence: true
   validates :email,      presence: true,
     format: { with: Authlogic::Regex.email }
-
-  attr_reader :agreement
-  validates :agreement, acceptance: true
 
   private
 

@@ -10,7 +10,7 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
-  <%= render 'layouts/flash' %>
+  <%= render 'layouts/flash' if flash.any? %>
   <main container class="site-content">
     <%= yield %>
   </main>

@@ -1,10 +1,13 @@
 class StoriesController < ApplicationController
   def new
-    @story    = current_user ? current_user.stories.new : Story.new
-    @location = @story.build_location
+    @story = current_user ? current_user.stories.new : Story.new
   end
 
   def show
+    @story = Story.find(params[:id])
+  end
+
+  def edit
     @story = Story.find(params[:id])
   end
 

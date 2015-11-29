@@ -1,0 +1,52 @@
+<%= form_for @story do |f| %>
+  <fieldset>
+    <legend>Details of your story</legend>
+    <div class="form-field">
+      <%= f.label :title, 'Story title' %>
+      <%= f.text_field :title, autofocus: true %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :category_id, 'Category (tax, traffic ticket, etc)' %>
+      <%= f.select :category_id, Category.list_category, prompt: true %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :content, 'Summary of your story' %>
+      <%= f.text_area :content, rows: 7 %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :amount, "How much you've paid?" %>
+      <%= f.text_field :amount %>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>When and where it happens?</legend>
+    <div class="form-field">
+      <%= f.label :event_date, 'When it happens?' %>
+      <%= f.text_field :event_date %>
+    </div>
+    <%= f.fields_for :location, @story.location || @story.build_location do |field| %>
+      <div class="form-field">
+        <%= field.label :province_id %>
+        <%= field.collection_select :province_id, Province.all, :id, :name, prompt: true %>
+      </div>
+
+      <div class="form-field">
+        <%= field.label :city_id %>
+        <%= field.grouped_collection_select :city_id, Province.all.order(:name), :cities, :name, :id, :name, prompt: true %>
+      </div>
+    <% end %>
+
+    <% unless current_user %>
+      <div class="form-field">
+        <%= f.label :email, 'Your email address' %>
+        <%= f.text_field :email %>
+      </div>
+    <% end %>
+  </fieldset>
+
+  <%= f.submit %>
+<% end %>

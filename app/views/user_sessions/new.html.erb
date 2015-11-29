@@ -1,9 +1,26 @@
 <div row>
   <div column="4 +4">
     <h3>Login to Stop Suap</h3>
-    <%= render 'form' %>
+    <%= form_for @user_session, url: login_path do |f| %>
+      <div class="form-field">
+        <%= f.text_field :email, placeholder: 'Email' %>
+      </div>
+
+      <div class="form-field">
+        <%= f.password_field :password, placeholder: 'Password' %>
+      </div>
+
+      <div class="form-field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me do %>
+          Remember me &middot;
+          <%= link_to 'Forgot password?', '#' %>
+        <% end %>
+      </div>
+
+      <%= f.submit 'Login' %>
+    <% end %>
     <hr>
     <p>New to Stop Suap? <%= link_to 'Sign up here!', signup_path %></p>
   </div>
 </div>
-

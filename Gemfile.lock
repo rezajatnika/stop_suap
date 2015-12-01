@@ -42,6 +42,8 @@ GEM
       activesupport (>= 3.2)
       request_store (~> 1.0)
       scrypt (>= 1.2, < 3.0)
+    autonumeric-rails (1.9.39)
+      jquery-rails (>= 2.0.2)
     bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -177,10 +179,11 @@ PLATFORMS
 
 DEPENDENCIES
   authlogic (= 3.4.6)
+  autonumeric-rails (= 1.9.39)
   bcrypt (= 3.1.10)
   better_errors (= 2.1.1)
   byebug (= 6.0.2)
-  faker
+  faker (= 1.6.1)
   hirb (= 0.7.3)
   jquery-rails (= 4.0.5)
   pg (= 0.18.3)

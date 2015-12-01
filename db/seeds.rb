@@ -40,11 +40,11 @@ Category.create(
     content: Faker::Lorem.paragraph,
     amount: 100_000,
     event_date: Date.today,
-    email: user.email
+    email: user.email,
+    location_attributes: [
+      city_id: 1,
+      province_id: 1
+    ]
   )
   puts "Story from #{user.email} created"
-end
-
-Story.all.each do |story|
-  story.create_location(city_id: 1, province_id: 1)
 end

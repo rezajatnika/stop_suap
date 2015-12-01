@@ -3,17 +3,17 @@ Rails.application.routes.draw do
   root 'mockups#index'
 
   # User sessions
-  get 'login', to: 'user_sessions#new'
-  post 'login', to: 'user_sessions#create'
+  get    'login',  to: 'user_sessions#new'
+  post   'login',  to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 
   # User sign up
-  get 'signup', to: 'users#new'
+  get  'signup', to: 'users#new'
   post 'signup', to: 'users#create'
 
   # Resources
   resources :stories do
-    resource :location
+    resource :location, only: [:create]
   end
 
   # Mockups

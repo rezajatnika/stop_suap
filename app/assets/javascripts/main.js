@@ -5,7 +5,7 @@ $("a.alert-close").click(function(event) {
 });
 
 // Pick a date
-$(document).on('ready', function() {
+$(function() {
   $('#story_event_date').pickadate({
     today: '',
     clear: '',
@@ -14,9 +14,5 @@ $(document).on('ready', function() {
   });
 });
 
-// Currency
-$('#story_amount').autoNumeric('init', {
-  aSep: '_',
-  vMin: '0',
-  vMax: '999999999'
-});
+// Autonumeric
+$(document).trigger('refresh_autonumeric')

@@ -2,7 +2,7 @@
   <div container class="alert-flash">
     <div class="alert alert--<%= key %>">
       <a class="alert-close" href="#">&times;</a>
-      <p><%= message %></p>
+      <p><%= message.html_safe %></p>
     </div>
   </div>
 <% end %>

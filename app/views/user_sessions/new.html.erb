@@ -3,7 +3,7 @@
     <h3>Login to Stop Suap</h3>
     <%= form_for @user_session, url: login_path do |f| %>
       <div class="form-field">
-        <%= f.text_field :email, placeholder: 'Email' %>
+        <%= f.text_field :email, placeholder: 'Email', autofocus: true %>
       </div>
 
       <div class="form-field">

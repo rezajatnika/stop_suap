@@ -3,7 +3,7 @@
     <h3><%= @story.title %></h3>
     <p class="story-label">
       <span class="label bg--error"><%= @story.category.name %></span>
-      <span class="label">Rp. <%= @story.amount.to_i %></span>
+      <span class="label"><%= number_to_currency(@story.amount, unit: 'Rp ', precision: 0) %></span>
     </p>
     <small>Reported on <%= @story.created_at.strftime('%e %B, %Y') %> from <%= @story.location.city.name %></small>
     <div class="content_container">

@@ -2,7 +2,7 @@
   <h4><%= link_to story.title, story %></h4>
   <p class="story-label">
     <span class="label bg--error"><%= story.category.name %></span>
-    <span class="label">Rp. <%= story.amount.to_i %></span>
+    <span class="label"><%= number_to_currency(story.amount, unit: 'Rp ', precision: 0) %></span>
   </p>
   <small>Reported on <%= story.created_at.strftime('%e %B, %Y') %> from <%= story.location.city.name %></small>
   <p><%= truncate(story.content, length: 160) { link_to ' read more »', story } %></p>

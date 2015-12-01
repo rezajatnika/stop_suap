@@ -22,6 +22,7 @@ class StoriesController < ApplicationController
     if @story.save
       redirect_to @story, success: 'Report created!'
     else
+      flash.now[:warning] = 'Please review your report again.'
       render :new
     end
   end
@@ -30,12 +31,9 @@ class StoriesController < ApplicationController
 
   def story_params
     attr = [
-      :title, :content, :amount, :event_date, :category_id, :email, location
+      :title, :content, :amount, :event_date, :category_id, :email,
+      location_attributes: [:city_id, :province_id]
     ]
     params.require(:story).permit(*attr)
-  end
-
-  def location
-    return { location_attributes: [:city_id, :province_id] }
   end
 end

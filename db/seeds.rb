@@ -41,10 +41,10 @@ Category.create(
     amount: 100_000,
     event_date: Date.today,
     email: user.email,
-    location_attributes: [
+    location_attributes: {
       city_id: 1,
       province_id: 1
-    ]
+    }
   )
   puts "Story from #{user.email} created"
 end

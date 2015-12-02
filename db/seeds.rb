@@ -37,8 +37,8 @@ Category.create(
   user.stories.create(
     title: Faker::Lorem.sentence,
     category: Category.order('RANDOM()').first,
-    content: Faker::Lorem.paragraph,
-    amount: 100_000,
+    content: Faker::Hipster.paragraph(10),
+    amount: Faker::Commerce.price * 1000,
     event_date: Date.today,
     email: user.email,
     location_attributes: {

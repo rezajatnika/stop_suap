@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   post 'signup', to: 'users#create'
 
   # Resources
-  resources :stories do
+  resources :stories, only: [:new, :create, :show, :index] do
     resource :location, only: [:create]
   end
 

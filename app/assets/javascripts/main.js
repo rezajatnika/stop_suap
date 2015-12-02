@@ -1,17 +1,16 @@
 // Close alert message
-$("a.alert-close").click(function(event) {
+var alertClose = $('a.alert-close');
+alertClose.click(function(event) {
   event.preventDefault();
-  $(".alert-flash").hide();
+  alertClose.hide();
 });
 
 // Pick a date
-$(function() {
-  $('#story_event_date').pickadate({
-    today: '',
-    clear: '',
-    close: '',
-    max: new Date()
-  });
+$('#story_event_date').pickadate({
+  today: '',
+  clear: '',
+  close: '',
+  max: new Date()
 });
 
 // Autonumeric

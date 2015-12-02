@@ -5,6 +5,6 @@
     <span class="label"><%= number_to_currency(story.amount, unit: 'Rp ', precision: 0) %></span>
   </p>
   <small>Reported on <%= story.created_at.strftime('%e %B, %Y') %> from <%= story.location.city.name %></small>
-  <p><%= truncate(story.content, length: 160) { link_to ' read more »', story } %></p>
+  <p><%= truncate(story.content, length: 160) { link_to " read more »", story } %></p>
 </div>
 <hr>

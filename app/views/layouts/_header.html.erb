@@ -4,7 +4,7 @@
     <nav column="8" class="nav">
       <ul>
         <li><%= link_to 'Home', root_path %></li>
-        <li><a href="#">About</a></li>
+        <li><%= link_to 'Read reports', stories_path %></li>
         <% if current_user  %>
           <li><%= link_to 'Logout', logout_path, method: :delete %></li>
         <% else %>

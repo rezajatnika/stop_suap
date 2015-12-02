@@ -2,7 +2,7 @@
 var alertClose = $('a.alert-close');
 alertClose.click(function(event) {
   event.preventDefault();
-  alertClose.hide();
+  $('.alert-flash').hide();
 });
 
 // Pick a date

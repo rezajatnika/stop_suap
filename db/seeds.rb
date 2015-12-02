@@ -1,3 +1,6 @@
+require 'carmen'
+include Carmen
+
 # User for guest stories
 User.create(
   email: 'anon@ymous.com',
@@ -15,12 +18,18 @@ User.create(
 end
 
 # Locations
-west_java = Province.create(name: 'West Java')
-west_java.cities.create(
+jawa = Country.named('Indonesia').subregions.named('Jawa')
+jawa.subregions.map { |reg| reg.name }.each do |province|
+  Province.create(name: province)
+  puts "#{province} created"
+end
+
+jawa_barat = Province.find_by_name('Jawa Barat')
+jawa_barat.cities.create(
   [
     { name: 'Kota Bandung' },
     { name: 'Kota Cimahi' },
-    { name: 'Kabupaten Bandung' }
+    { name: 'Kabupaten Bandung Barat' }
   ]
 )
 
@@ -42,8 +51,8 @@ Category.create(
     event_date: Date.today,
     email: user.email,
     location_attributes: {
-      city_id: 1,
-      province_id: 1
+      city_id: jawa_barat.cities.order('RANDOM()').first.id,
+      province_id: jawa_barat.id
     }
   )
   puts "Story from #{user.email} created"

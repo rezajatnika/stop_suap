@@ -15,3 +15,8 @@ $('#story_event_date').pickadate({
 
 // Autonumeric
 $(document).trigger('refresh_autonumeric')
+
+// Filter cities by province
+// $(function() {
+//   filterCityList();
+// });

@@ -5,6 +5,7 @@
       <ul>
         <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Read reports', stories_path %></li>
+        <li><%= link_to 'Create report', new_story_path %></li>
         <% if current_user  %>
           <li><%= link_to 'Logout', logout_path, method: :delete %></li>
         <% else %>

@@ -9,3 +9,6 @@
 #
 # two: {}
 #  column: value
+
+tax:
+  name: Tax Office

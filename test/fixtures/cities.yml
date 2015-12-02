@@ -5,3 +5,11 @@
 
 # two:
 #   name: MyString
+
+bandung:
+  name: Kota Bandung
+  province: westjava
+
+cimahi:
+  name: Kota Cimahi
+  province: westjava

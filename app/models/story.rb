@@ -1,5 +1,5 @@
 class Story < ActiveRecord::Base
-  before_save :set_email, :set_user
+  before_validation :set_email, :set_user
 
   # Associations
   has_one :location

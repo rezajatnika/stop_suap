@@ -5,6 +5,8 @@ class Story < ActiveRecord::Base
   has_one :location
   accepts_nested_attributes_for :location, reject_if: :all_blank
 
+  has_many :comments, dependent: :destroy
+
   belongs_to :user
   belongs_to :category
 

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # Resources
   resources :stories, only: [:new, :create, :show, :index] do
     resource :location, only: [:create]
+    resources :comments, only: :create
   end
 
   # Mockups

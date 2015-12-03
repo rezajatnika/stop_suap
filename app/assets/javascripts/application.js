@@ -17,5 +17,6 @@
 //= require highmaps
 //= require id-all
 //= require exporting
+//= require turbolinks
 //= require autonumeric
 //= require_tree .

@@ -1,4 +1,4 @@
-var map = function(){
+$(function(){
 
     // Prepare demo data
     var data = [
@@ -182,6 +182,4 @@ var map = function(){
             }
         }]
     });
-}
-$(document).ready(map);
-$(document).on('page:load', map);
+});

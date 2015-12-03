@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   def create
     @story = Story.find(params[:story_id])
     @comment = @story.comments.build(secure_params)
+    @comment.user_id = current_user.id
     respond_to do |format|
       if @comment.save
         format.js

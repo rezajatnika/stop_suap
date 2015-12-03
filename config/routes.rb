@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
 
+  resources :contacts, only: [:new, :create]
+
   # Mockups
   get 'mockups/index'
   get 'mockups/posts'

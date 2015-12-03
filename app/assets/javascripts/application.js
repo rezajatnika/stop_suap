@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require pickadate.js/picker.js
 //= require pickadate.js/picker.date.js
+//= require highmaps
+//= require id-all
+//= require exporting
 //= require autonumeric
-//= require turbolinks
 //= require_tree .

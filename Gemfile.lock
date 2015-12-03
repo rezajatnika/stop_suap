@@ -193,7 +193,7 @@ DEPENDENCIES
   jquery-rails (= 4.0.5)
   pg (= 0.18.3)
   pry (= 0.10.3)
-  pry-rails
+  pry-rails (= 0.3.4)
   quiet_assets (= 1.1.0)
   rails (= 4.2.4)
   rails_12factor

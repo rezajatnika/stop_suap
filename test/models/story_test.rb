@@ -6,6 +6,7 @@ class StoryTest < ActiveSupport::TestCase
       title: 'Story title',
       content: 'Summary of story bla bla bla bla',
       category: categories(:tax),
+      paid: 0,
       amount: 130000,
       event_date: Date.today,
       email: 'myemail@dot.com',

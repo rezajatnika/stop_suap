@@ -17,4 +17,6 @@ class User < ActiveRecord::Base
       message: 'should use valid email address format'
     )
   end
+
+  validates :name, presence: true, length: { in: 3..50 }
 end

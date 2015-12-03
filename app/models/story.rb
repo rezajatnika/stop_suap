@@ -1,5 +1,5 @@
 class Story < ActiveRecord::Base
-  before_validation :set_email, :set_user
+  before_validation :set_email, :set_user, :set_name
 
   # Associations
   has_one :location
@@ -15,8 +15,12 @@ class Story < ActiveRecord::Base
   validates :amount,     presence: true
   validates :location,   presence: true
   validates :event_date, presence: true
+  validates :paid,       presence: true
+  validates :name,       presence: true
   validates :email,      presence: true,
     format: { with: Authlogic::Regex.email }
+
+  enum paid: [:notpaid, :paid]
 
   private
 
@@ -26,5 +30,9 @@ class Story < ActiveRecord::Base
 
   def set_email
     self.email ||= self.user.email
+  end
+
+  def set_name
+    self.name ||= self.user.name
   end
 end

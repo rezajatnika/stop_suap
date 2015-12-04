@@ -1,12 +1,15 @@
 <div class="container story-detail">
   <div class="row">
     <h3><%= @story.title %></h3>
-    <small>Reported on <%= @story.created_at.strftime('%e %B, %Y') %> from <%= @story.location.city.name %></small>
+    <small>Diposting pada <%= @story.created_at.strftime('%e %B, %Y') %> di <%= @story.location.city.name %></small>
     <div class="columns medium-5 medium-offset-2 border-right-double story-detail">
       <div class="content_container">
         <%= @story.content %>
       </div>
-      
+      <div class="share-action">
+        <a href=""><span class="share s-fb"></span></a>
+        <a href=""><span class="share s-twt"></span></a>
+      </div>
     </div>
     <div class="columns medium-3 float-left text-center">
       <h5 class="subheader"><%= @story.category.name %></h5>

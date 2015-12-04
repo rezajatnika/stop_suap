@@ -170,7 +170,22 @@ a {
     width: 80%;
     margin: 0 auto;
 }
-
+.share-action{
+  text-align: left;
+  .share{
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    background-size: contain;
+    margin-right: 1rem;
+  }
+  .s-fb {
+    background: url('S-FB.svg') center no-repeat;
+  }
+  .s-twt {
+    background: url('S-TWEET.svg') center no-repeat;
+  }
+}
 // End Site Content
 
 // Form
@@ -190,20 +205,43 @@ a {
         border-bottom: 4px double #000;
     }
 }
-
+.wizard > .actions {
+  text-align: center;
+}
+.wizard > .actions a {
+  background: #000;
+  border-radius: 0;
+  &:hover {
+    background: #000;
+    border-radius: 0;
+  }
+  &:active {
+    background: #000;
+    border-radius: 0;
+  }
+}
 // End Form
 
 // Site Footer
 
 .site-footer {
-    border-top: 1px solid #eee;
     font-size: .875em;
     padding-top: 10px;
     padding-bottom: 10px;
-
+    background: #000;
+    color: #fff;
+    height: 4.5rem;
+    a:hover {
+      color: #fff;
+    }
+    p {  
+      margin-bottom: 0;
+      line-height: 4;
+    }
     ul.right {
-        text-align: right;
-
+      float: right;
+      margin-bottom: 0;
+      line-height: 4;
         li {
             display: inline;
             margin-left: 20px;

@@ -31,7 +31,7 @@ class StoriesController < ApplicationController
 
   def story_params
     attr = [
-      :title, :content, :amount, :event_date, :category_id, :email,
+      :title, :content, :amount, :event_date, :category_id, :email, :ya, :tidak,
       location_attributes: [:city_id, :province_id]
     ]
     params.require(:story).permit(*attr)

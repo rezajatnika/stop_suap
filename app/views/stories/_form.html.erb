@@ -1,14 +1,15 @@
 <%= form_for @story,:html => {:id => "report-wizard", :action => "", 'data-abide' => ""} do |f| %>
     <h3></h3>
     <section>
-      <%= f.label :title, 'Story title' %>
+      <%= f.label :title, 'Judul' %>
       <%= f.text_field :title, autofocus: true %>
-      <%= f.label :category_id, 'Category (tax, traffic ticket, etc)' %>
+      <%= f.label :category_id, 'Kategori' %>
       <%= f.select :category_id, Category.list_category, prompt: true %>
-      <%= f.label :content, 'Summary of your story' %>
+      <%= f.label :content, 'Deskripsi' %>
       <%= f.text_area :content, rows: 7 %>
       <%= f.label :amount, "How much you've paid?" %>
       <%= f.text_field :amount, data: { autonumeric: { aSign: 'Rp ', mDec: 0 } } %>
+
     </section>
     <h3></h3>
     <section>
@@ -16,14 +17,16 @@
       <%= f.text_field :event_date,
         value: (@story.event_date.nil? ? Date.today.strftime('%e %B, %Y') : @story.event_date.strftime('%e %B, %Y')) %>
       <%= f.fields_for :location, @story.location || @story.build_location do |field| %>
-        <div class="form-group">
-          <%= field.label :province_id %>
-          <%= field.collection_select :province_id, Province.all, :id, :name, prompt: true %>
-        </div>
+        <div class="row">
+          <div class="columns small-6">
+            <%= field.label :province_id %>
+            <%= field.collection_select :province_id, Province.all, :id, :name, prompt: true %>
+          </div>
 
-        <div class="form-group">
-          <%= field.label :city_id %>
-          <%= field.grouped_collection_select :city_id, Province.all.order(:name), :cities, :name, :id, :name, prompt: true %>
+          <div class="columns small-6">
+            <%= field.label :city_id %>
+            <%= field.grouped_collection_select :city_id, Province.all.order(:name), :cities, :name, :id, :name, prompt: true %>
+          </div>
         </div>
       <% end %>
 
@@ -31,7 +34,7 @@
     <% unless current_user %>
       <h3></h3>
       <section>
-        <div class="form-field">
+        <div class="form-group">
           <%= f.label :email, 'Your email address' %>
           <%= f.text_field :email %>
         </div>

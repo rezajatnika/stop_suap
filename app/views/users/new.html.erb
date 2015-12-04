@@ -1,6 +1,6 @@
 <div class="row">
   <div class="columns medium-4 medium-offset-4">
-    <div class="callout secondary login">
+    <div class="login">
       <h3>Join Stop Suap today!</h3>
       <%= form_for @user, url: signup_path do |f| %>
         <div class="form-field">
@@ -15,7 +15,7 @@
           <%= f.password_field :password_confirmation, class: 'input--large', placeholder: 'Password confirmation' %>
         </div>
 
-        <%= f.submit 'Sign Up', class: 'input--large' %>
+        <%= f.submit 'Sign Up', class: 'button large float-center' %>
       <% end %>
       <small>
         By signing up, you agree to the Terms of Service and Privacy Policy,

@@ -1,14 +1,21 @@
-<div row>
-  <div column="6 +3">
+<div class="container story-detail">
+  <div class="row">
     <h3><%= @story.title %></h3>
-    <p class="story-label">
-      <span class="label bg--error"><%= @story.category.name %></span>
-      <span class="label"><%= number_to_currency(@story.amount, unit: 'Rp ', precision: 0) %></span>
-    </p>
     <small>Reported on <%= @story.created_at.strftime('%e %B, %Y') %> from <%= @story.location.city.name %></small>
-    <div class="content_container">
-      <%= @story.content %>
+    <div class="columns medium-5 medium-offset-2 border-right-double story-detail">
+      <div class="content_container">
+        <%= @story.content %>
+      </div>
+      
     </div>
-    <%= render 'comment_form' %>
+    <div class="columns medium-3 float-left text-center">
+      <h5 class="subheader"><%= @story.category.name %></h5>
+      <h3><%= number_to_currency(@story.amount, unit: 'Rp ', precision: 0) %></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns medium-8 medium-offset-2">
+      <%= render 'comment_form' %>
+    </div>
   </div>
 </div>

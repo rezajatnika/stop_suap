@@ -4,12 +4,80 @@
   }
 }
 .button{
+  background: transparent;
+  border: 4px double #000;
+  padding: 0.5rem 1rem;
+  color: #000;
   &:hover{
-    outline: none;
+    background: #000;
+    color: #fff;
   }
 }
 .pagination {
   .current{
     background: #000;
+  }
+}
+.callout{
+  border: 4px double #000;
+}
+.wizard { 
+  .steps {
+    .current {
+      a, a:hover, a:active{
+        background: #000;
+      }
+    }
+  }
+}
+.wizard { 
+  .steps {
+    a, a:hover, a:active{
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      line-height: 1;
+      text-align: center;
+      font-size: 2rem;
+      background: #C7C7C7; 
+    }
+  }
+}
+.wizard {
+  .steps {
+    .done {
+      a, a:hover, a:active{
+        background: #565656;
+      }
+    }
+  }
+}
+.wizard {
+  .steps {
+    ul {
+      text-align: center;
+      li{
+        display: inline-block;
+        float: none;
+        // &:not(:last-child):after{
+        //   content: '';
+        //   height: .6rem;
+        //   width: 8rem;
+        //   background: #eee;
+        //   position: absolute;
+        //   top: 3.5rem;
+        //   z-index: -1;
+        // }
+      }
+    }
+  }
+  .actions {
+    ul {
+      text-align: center;
+      li {
+        display: inline-block;
+        float: none;
+      }
+    }
   }
 }

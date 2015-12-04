@@ -3,7 +3,11 @@
     <h3>Join Stop Suap today!</h3>
     <%= form_for @user, url: signup_path do |f| %>
       <div class="form-field">
-        <%= f.text_field :email, class: 'input--large', placeholder: 'Email', autofocus: true %>
+        <%= f.text_field :name, class: 'input--large', placeholder: 'Name', autofocus: true %>
+      </div>
+
+      <div class="form-field">
+        <%= f.text_field :email, class: 'input--large', placeholder: 'Email' %>
       </div>
 
       <div class="form-field">

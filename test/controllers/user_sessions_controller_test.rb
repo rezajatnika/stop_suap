@@ -7,10 +7,7 @@ class UserSessionsControllerTest < ActionController::TestCase
   end
 
   test 'should create user session' do
-    post :create, user_session: {
-      email: 'theuser@email.com',
-      password: 'asdqwe123'
-    }
+    post_user_session
     assert user_session = UserSession.find
     assert_equal users(:theuser), user_session.user
     assert_redirected_to root_path
@@ -20,5 +17,18 @@ class UserSessionsControllerTest < ActionController::TestCase
     post :create, user_session: { email: 'theuser', password: 'invalid' }
     assert_nil UserSession.find
     assert_template 'new'
+  end
+
+  test 'should destroy user session' do
+    post_user_session
+    delete :destroy
+    assert_nil UserSession.find
+    assert_redirected_to root_path
+  end
+
+  private
+
+  def post_user_session
+    post :create, user_session: { email: 'user@mail.com', password: 'asdqwe123' }
   end
 end

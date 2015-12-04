@@ -11,6 +11,7 @@
 #  column: value
 
 anonymous:
+  name: Anonymous
   email: anon@ymous.com
   password_salt: <%= salt = Authlogic::Random.hex_token %>
   crypted_password: <%= Authlogic::CryptoProviders::BCrypt.encrypt('asdqwe123' + salt) %>
@@ -19,7 +20,8 @@ anonymous:
   perishable_token: <%= Authlogic::Random.friendly_token %>
 
 theuser:
-  email: theuser@email.com
+  name: User Mail
+  email: user@mail.com
   password_salt: <%= salt = Authlogic::Random.hex_token %>
   crypted_password: <%= Authlogic::CryptoProviders::BCrypt.encrypt('asdqwe123' + salt) %>
   persistence_token: <%= Authlogic::Random.hex_token %>

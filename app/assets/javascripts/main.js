@@ -25,3 +25,8 @@ $(document).on('ready page:load', function() {
     return $("#new_comment").append("<p>ERROR</p>");
   });
 });
+
+// Filter cities by province
+// $(function() {
+//   filterCityList();
+// });

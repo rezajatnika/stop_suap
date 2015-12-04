@@ -10,6 +10,7 @@ gem 'turbolinks',        '2.5.3'
 gem 'authlogic',         '3.4.6'
 gem 'bcrypt',            '3.1.10'
 gem 'autonumeric-rails', '1.9.39'
+gem 'carmen',            '1.0.2'
 
 group :doc do
   gem 'sdoc', '0.4.1'
@@ -20,6 +21,7 @@ group :development, :test do
   gem 'spring',      '1.4.0'
   gem 'web-console', '2.2.1'
   gem 'pry',         '0.10.3'
+  gem 'pry-rails',   '0.3.4'
 end
 
 group :development do

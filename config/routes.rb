@@ -19,6 +19,20 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:new, :create]
 
+  # Account settings
+  scope '/account' do
+    get 'settings', to: 'users#edit'
+    get 'change_password', to: 'settings/passwords#show'
+    post 'change_password', to: 'settings/passwords#create'
+  end
+
+  # Account settings
+  scope '/account' do
+    get 'settings', to: 'users#edit'
+    get 'change_password', to: 'settings/passwords#show'
+    post 'change_password', to: 'settings/passwords#create'
+  end
+
   # Mockups
   get 'mockups/index'
   get 'mockups/posts'

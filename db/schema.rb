@@ -65,11 +65,13 @@ ActiveRecord::Schema.define(version: 20151203154402) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "content"
+    t.integer  "paid",        default: 0
     t.integer  "amount"
     t.datetime "event_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "email"
+    t.string   "name"
   end
 
   add_index "stories", ["category_id"], name: "index_stories_on_category_id", using: :btree
@@ -77,6 +79,7 @@ ActiveRecord::Schema.define(version: 20151203154402) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                           null: false
+    t.string   "name",                            null: false
     t.string   "crypted_password",                null: false
     t.string   "password_salt",                   null: false
     t.string   "persistence_token",               null: false

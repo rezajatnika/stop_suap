@@ -17,6 +17,11 @@
     </div>
 
     <div class="form-field">
+      <%= f.check_box :paid, {}, 'paid', 'notpaid' %>
+      <%= f.label :paid, 'Did you paid bribe?' %>
+    </div>
+
+    <div class="form-field">
       <%= f.label :amount, "How much you've paid?" %>
       <%= f.text_field :amount, data: { autonumeric: { aSign: 'Rp ', mDec: 0 } } %>
     </div>
@@ -42,6 +47,10 @@
     <% end %>
 
     <% unless current_user %>
+      <div class="form-field">
+        <%= f.label :name, 'Your name' %>
+        <%= f.text_field :name %>
+      </div>
       <div class="form-field">
         <%= f.label :email, 'Your email address' %>
         <%= f.text_field :email %>

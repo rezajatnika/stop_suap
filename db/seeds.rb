@@ -1,5 +1,9 @@
+require 'carmen'
+include Carmen
+
 # User for guest stories
 User.create(
+  name: 'Anonymous',
   email: 'anon@ymous.com',
   password: 'asdqwe123',
   password_confirmation: 'asdqwe123'
@@ -8,6 +12,7 @@ User.create(
 # Random users
 30.times do
   User.create(
+    name: Faker::Name.name,
     email: Faker::Internet.free_email,
     password: 'asdqwe123',
     password_confirmation: 'asdqwe123'
@@ -15,12 +20,18 @@ User.create(
 end
 
 # Locations
-west_java = Province.create(name: 'West Java')
-west_java.cities.create(
+jawa = Country.named('Indonesia').subregions.named('Jawa')
+jawa.subregions.map { |reg| reg.name }.each do |province|
+  Province.create(name: province)
+  puts "#{province} created"
+end
+
+jawa_barat = Province.find_by_name('Jawa Barat')
+jawa_barat.cities.create(
   [
     { name: 'Kota Bandung' },
     { name: 'Kota Cimahi' },
-    { name: 'Kabupaten Bandung' }
+    { name: 'Kabupaten Bandung Barat' }
   ]
 )
 
@@ -40,10 +51,10 @@ Category.create(
     content: Faker::Hipster.paragraph(10),
     amount: Faker::Commerce.price * 1000,
     event_date: Date.today,
-    email: user.email,
+    paid: 1,
     location_attributes: {
-      city_id: 1,
-      province_id: 1
+      city_id: jawa_barat.cities.order('RANDOM()').first.id,
+      province_id: jawa_barat.id
     }
   )
   puts "Story from #{user.email} created"

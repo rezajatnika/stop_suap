@@ -143,9 +143,9 @@ $(function(){
     // Initiate the chart
     $('#container-map').highcharts('Map', {
 
-        title : {
-            text : 'Sebaran Kasus'
-        },
+      title : {
+          text : ''
+      },
 
       exporting: {
         enabled: false

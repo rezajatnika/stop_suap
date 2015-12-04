@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation.min
 //= require pickadate.js/picker.js
 //= require pickadate.js/picker.date.js
+//= require Chart.min
 //= require highmaps
 //= require id-all
 //= require exporting

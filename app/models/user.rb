@@ -19,4 +19,17 @@ class User < ActiveRecord::Base
   end
 
   validates :name, presence: true, length: { in: 3..50 }
+
+  def change_current_password!(current, new_password, confirmation)
+    if new_password == confirmation && self.valid_password?(current)
+      update_attributes!(
+        password: new_password,
+        password_confirmation: confirmation
+      )
+      logger.info("Password for #{self.name} has been changed.")
+    else
+      logger.warn("Password for #{self.name} unchanged.")
+      return false
+    end
+  end
 end

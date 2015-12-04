@@ -1,0 +1,23 @@
+<div row>
+  <div column="4 +4">
+    <h3>Change your password</h3>
+    <%= form_for @user, url: change_password_path, method: :post do |f| %>
+      <div class="form-field">
+        <%= f.label :current_password %>
+        <%= f.password_field :current_password %>
+      </div>
+
+      <div class="form-field">
+        <%= f.label :new_password %>
+        <%= f.password_field :new_password %>
+      </div>
+
+      <div class="form-field">
+        <%= f.label :new_password_confirmation %>
+        <%= f.password_field :new_password_confirmation %>
+      </div>
+
+      <%= f.submit 'Change password!' %>
+    <% end %>
+  </div>
+</div>

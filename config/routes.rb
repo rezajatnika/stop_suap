@@ -16,6 +16,13 @@ Rails.application.routes.draw do
     resource :location, only: [:create]
   end
 
+  # Account settings
+  scope '/account' do
+    get 'settings', to: 'users#edit'
+    get 'change_password', to: 'settings/passwords#show'
+    post 'change_password', to: 'settings/passwords#create'
+  end
+
   # Mockups
   get 'mockups/index'
   get 'mockups/posts'

@@ -14,6 +14,8 @@ class StoriesController < ApplicationController
 
   def index
     @stories = Story.includes(:category, location: [:city, :province]).all
+    @search = Story.ransack(params[:q])
+    @stories = @search.result.includes(:category, :location)
   end
 
   def create

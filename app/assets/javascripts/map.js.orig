@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 var map;
 map = function() {
+=======
+$(function () {
+>>>>>>> development
     // Prepare demo data
     var data = [
         {

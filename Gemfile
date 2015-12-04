@@ -10,6 +10,7 @@ gem 'turbolinks',        '2.5.3'
 gem 'authlogic',         '3.4.6'
 gem 'bcrypt',            '3.1.10'
 gem 'autonumeric-rails', '1.9.39'
+gem 'ransack'
 
 group :doc do
   gem 'sdoc', '0.4.1'

@@ -14,6 +14,30 @@ Rails.application.routes.draw do
   # Resources
   resources :stories, only: [:new, :create, :show, :index] do
     resource :location, only: [:create]
+    resources :comments, only: :create
+  end
+
+  resources :contacts, only: [:new, :create]
+
+  # Account settings
+  scope '/account' do
+    get 'settings', to: 'users#edit'
+    get 'change_password', to: 'settings/passwords#show'
+    post 'change_password', to: 'settings/passwords#create'
+  end
+
+  # Account settings
+  scope '/account' do
+    get 'settings', to: 'users#edit'
+    get 'change_password', to: 'settings/passwords#show'
+    post 'change_password', to: 'settings/passwords#create'
+  end
+
+  # Account settings
+  scope '/account' do
+    get 'settings', to: 'users#edit'
+    get 'change_password', to: 'settings/passwords#show'
+    post 'change_password', to: 'settings/passwords#create'
   end
 
   # Mockups

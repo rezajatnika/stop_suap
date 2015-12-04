@@ -5,6 +5,7 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
+    @comments = @story.comments
   end
 
   def edit
@@ -31,8 +32,8 @@ class StoriesController < ApplicationController
 
   def story_params
     attr = [
-      :title, :content, :amount, :event_date, :category_id, :email,
-      location_attributes: [:city_id, :province_id]
+      :title, :content, :amount, :event_date, :category_id, :email, :paid,
+      :name, location_attributes: [:city_id, :province_id]
     ]
     params.require(:story).permit(*attr)
   end

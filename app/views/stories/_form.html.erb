@@ -7,9 +7,17 @@
       <%= f.select :category_id, Category.list_category, prompt: true %>
       <%= f.label :content, 'Summary of your story' %>
       <%= f.text_area :content, rows: 7 %>
+
+    <div class="form-field">
+      <%= f.check_box :paid, {}, 'paid', 'notpaid' %>
+      <%= f.label :paid, 'Did you paid bribe?' %>
+    </div>
+
+    <div class="form-field">
       <%= f.label :amount, "How much you've paid?" %>
       <%= f.text_field :amount, data: { autonumeric: { aSign: 'Rp ', mDec: 0 } } %>
     </section>
+
     <h3>Effects</h3>
     <section>
       <%= f.label :event_date, 'When it happens?' %>
@@ -26,11 +34,16 @@
           <%= field.grouped_collection_select :city_id, Province.all.order(:name), :cities, :name, :id, :name, prompt: true %>
         </div>
       <% end %>
-
     </section>
+
     <% unless current_user %>
       <h3>Pager</h3>
       <section>
+      <div class="form-field">
+        <%= f.label :name, 'Your name' %>
+        <%= f.text_field :name %>
+      </div>
+
         <div class="form-field">
           <%= f.label :email, 'Your email address' %>
           <%= f.text_field :email %>

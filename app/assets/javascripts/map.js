@@ -1,5 +1,4 @@
-$(function(){
-
+$(function () {
     // Prepare demo data
     var data = [
         {
@@ -148,6 +147,10 @@ $(function(){
       },
 
       exporting: {
+        enabled: false
+      },
+
+      credits: {
         enabled: false
       },
 

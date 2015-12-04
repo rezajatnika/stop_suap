@@ -1,0 +1,15 @@
+.headline{
+  .columns{
+    padding: 0 4rem;
+  }
+}
+.button{
+  &:hover{
+    outline: none;
+  }
+}
+.pagination {
+  .current{
+    background: #000;
+  }
+}

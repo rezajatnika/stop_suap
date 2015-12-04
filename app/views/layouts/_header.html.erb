@@ -1,4 +1,4 @@
-<header container class="site-header">
+<!-- <header container class="site-header">
   <div row>
     <h1 column="4" class="logo">Stop Suap</h1>
     <nav column="8" class="nav">
@@ -14,4 +14,22 @@
       </ul>
     </nav>
   </div>
-</header>
+</header> -->
+
+<div class="top-bar">
+  <div class="top-bar-left">
+    <div class="menu-text"><h3><%= link_to 'Stop Suap', root_path %></h3></div>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Read reports', stories_path %></li>
+      <li><%= link_to 'Create report', new_story_path %></li>
+      <% if current_user  %>
+        <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'Login', login_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

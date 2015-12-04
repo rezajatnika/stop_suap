@@ -1,10 +1,16 @@
 <div class="story">
-  <h4><%= link_to story.title, story %></h4>
-  <p class="story-label">
-    <span class="label bg--error"><%= story.category.name %></span>
-    <span class="label"><%= number_to_currency(story.amount, unit: 'Rp ', precision: 0) %></span>
-  </p>
-  <small>Reported on <%= story.created_at.strftime('%e %B, %Y') %> from <%= story.location.city.name %></small>
-  <p><%= truncate(story.content, length: 160) { link_to " read more »", story } %></p>
+  <div class="row">
+    <div class="columns medium-9 small-12 border-right-double">
+      <h4><%= link_to story.title, story %></h4>
+      <small>Reported on <%= story.created_at.strftime('%e %B, %Y') %> from <%= story.location.city.name %></small>
+      <p><%= truncate(story.content, length: 160) { link_to " read more »", story } %></p>
+    </div>
+    <div class="columns medium-3 small-12 text-center">
+      <p class="subheader"><%= story.category.name %></p>
+      <h3 class=""><%= number_to_currency(story.amount, unit: 'Rp. ', precision: 0) %></h3>
+      <p class="subheader">Bandung, Jawa barat</p>
+    </div>
+  </div>
 </div>
-<hr>
+
+

@@ -1,5 +1,4 @@
 $(function () {
-  console.log("ready");
     // Prepare demo data
     var data = [
         {
@@ -143,9 +142,9 @@ $(function () {
     // Initiate the chart
     $('#container-map').highcharts('Map', {
 
-        title : {
-            text : 'Sebaran Kasus'
-        },
+      title : {
+          text : ''
+      },
 
       exporting: {
         enabled: false
@@ -187,4 +186,3 @@ $(function () {
         }]
     });
 });
-

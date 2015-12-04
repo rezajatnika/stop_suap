@@ -9,12 +9,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/header' %>
-  <%= render 'layouts/flash' if flash.any? %>
-  <main container class="site-content">
-    <%= yield %>
-  </main>
-  <%= render 'layouts/footer' %>
+  <div class="wrapper">
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/flash' if flash.any? %>
+    <main container class="site-content">
+      <%= yield %>
+    </main>
+    <%= render 'layouts/footer' %>
+  </div>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

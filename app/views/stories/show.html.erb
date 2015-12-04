@@ -9,6 +9,11 @@
     <div class="content_container">
       <%= @story.content %>
     </div>
-    <%= render 'comment_form' %>
+    <% if current_user %>
+      <%= render 'comment_form' %>
+    <% end %>
+    <div id="comments">
+      <%= render @comments  %>
+    </div>
   </div>
 </div>

@@ -1,12 +1,15 @@
 <div class="comments">
   <h4>Your thoughts</h4>
-  <%= form_tag do %>
+  <%= form_for [@story, Comment.new] , remote: true, html: {class: "new_comment", id: "new_comment"} do |f| %>
     <div class="form-field">
-      <%= text_area_tag(:comment) %>
+      <%= f.text_area :body %>
     </div>
 
     <div class="form-field">
-      <%= button_tag 'Submit', class: 'button button--sm button--pill', disabled: true %>
+      <%= f.submit "submit", class: 'button button--sm button--pill'%>
     </div>
   <% end %>
 </div>
+
+
+      

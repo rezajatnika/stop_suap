@@ -25,6 +25,9 @@
     </div>
   </div>
   <div class="index-report">
+   <%= search_form_for @search do |f| %>
+      <%= f.search_field :title_or_content_or_category_name_or_location_city_name_or_location_province_name_cont %>
+    <% end %>
     <%= render partial: 'story', collection: @stories.order(created_at: 'desc') %>
     <ul class="pagination text-center" role="navigation" aria-label="Pagination">
       <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>

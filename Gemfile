@@ -11,6 +11,7 @@ gem 'authlogic',         '3.4.6'
 gem 'bcrypt',            '3.1.10'
 gem 'autonumeric-rails', '1.9.39'
 gem 'carmen',            '1.0.2'
+gem 'ransack'
 
 group :doc do
   gem 'sdoc', '0.4.1'

@@ -1,0 +1,26 @@
+<div row>
+  <div column="6 +3">
+    <h3>Contact Us</h3>
+    <%= form_for @contact do |f| %>
+      <fieldset>
+        <div class="form-field">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+        <div class="form-field">
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
+        <div class="form-field">
+          <%= f.label :subject %>
+          <%= f.text_field :subject %>
+        </div>
+        <div class="form-field">
+          <%= f.label :message %>
+          <%= f.text_area :message %>
+        </div>
+      </fieldset>
+      <%= f.submit "contact us" %>
+    <% end %>
+  </div>
+</div>

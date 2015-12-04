@@ -18,7 +18,11 @@
   </div>
   <div class="row">
     <div class="columns medium-8 medium-offset-2">
+    <% if current_user %>
       <%= render 'comment_form' %>
+    <% end %>
+    <div id="comments">
+      <%= render @comments  %>
     </div>
   </div>
 </div>

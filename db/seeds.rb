@@ -3,6 +3,7 @@ include Carmen
 
 # User for guest stories
 User.create(
+  name: 'Anonymous',
   email: 'anon@ymous.com',
   password: 'asdqwe123',
   password_confirmation: 'asdqwe123'
@@ -11,6 +12,7 @@ User.create(
 # Random users
 30.times do
   User.create(
+    name: Faker::Name.name,
     email: Faker::Internet.free_email,
     password: 'asdqwe123',
     password_confirmation: 'asdqwe123'
@@ -49,7 +51,7 @@ Category.create(
     content: Faker::Hipster.paragraph(10),
     amount: Faker::Commerce.price * 1000,
     event_date: Date.today,
-    email: user.email,
+    paid: 1,
     location_attributes: {
       city_id: jawa_barat.cities.order('RANDOM()').first.id,
       province_id: jawa_barat.id

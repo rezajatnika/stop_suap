@@ -1,5 +1,41 @@
-<div row>
-  <div column="6 +3">
+<div class="container">
+  <div class="index-control">
+    <div class="row">
+      <div class="columns medium-5">
+        <input type="text" placeholder="Search" name="search">
+      </div>
+      <div class="columns medium-3 ">
+        <select id="kat">
+          <option value="" disabled selected>Kategori</option>
+          <option value="husker">Husker</option>
+          <option value="starbuck">Starbuck</option>
+          <option value="hotdog">Hot Dog</option>
+          <option value="apollo">Apollo</option>
+        </select>
+      </div>
+      <div class="columns medium-3 float-left">
+        <select id="prov">
+          <option value="" disabled selected>Provinsi</option>
+          <option value="jabar">Jawa Barat</option>
+          <option value="jatim">Jawa Timur</option>
+          <option value="jateng">Jawa Tengah</option>
+          <option value="jkt">Jakarta</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="index-report">
     <%= render partial: 'story', collection: @stories.order(created_at: 'desc') %>
+    <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+      <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+      <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+      <li><a href="#" aria-label="Page 2">2</a></li>
+      <li><a href="#" aria-label="Page 3">3</a></li>
+      <li><a href="#" aria-label="Page 4">4</a></li>
+      <li class="ellipsis" aria-hidden="true"></li>
+      <li><a href="#" aria-label="Page 12">12</a></li>
+      <li><a href="#" aria-label="Page 13">13</a></li>
+      <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+    </ul>
   </div>
 </div>

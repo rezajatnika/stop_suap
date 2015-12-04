@@ -1,26 +1,30 @@
 // Global style
-
 a {
   color: #525252;
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
   -o-transition: all ease 0.5s;
-
-  &:hover {
+  &:hover, :focus {
     color: #000;
-    
+    outline: none;
   }
 }
 
 .container{
   margin: 2rem;
 }
-.border-right{
+.border-right-double{
   border-right: 4px double #000;
 }
-.border-left{
+.border-left-double{
   border-left: 4px double #000;
+}
+.border-right{
+  border-right: 1px solid #000;
+}
+.border-left{
+  border-left: 1px solid #000;
 }
 // Site Header
 
@@ -113,7 +117,22 @@ a {
 .comments {
   margin-top: 40px;
 }
-
+.story{
+  margin: 3rem 0;
+}
+.index-control{
+  width: 60%;
+  margin: 3rem auto;
+  input{
+  }
+  li{
+    margin-left: 3rem;
+  }
+}
+.index-report{
+  width: 80%;
+  margin: 0 auto;
+}
 // End Site Content
 
 
@@ -123,7 +142,9 @@ a {
   margin-top: 0px;
   margin-bottom: 15px;
 }
-
+.login{
+  margin: 4rem 0;
+}
 // End Form
 
 

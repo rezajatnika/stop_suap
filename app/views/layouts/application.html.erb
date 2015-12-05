@@ -9,14 +9,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="wrapper">
-    <%= render 'layouts/header' %>
-    <%= render 'layouts/flash' if flash.any? %>
-    <main container class="site-content">
-      <%= yield %>
-    </main>
-    <%= render 'layouts/footer' %>
+  <%= render 'layouts/header' %>
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+      <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+        <%= render 'layouts/offcanvas' %>
+      </div>
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="wrapper">
+          <%= render 'layouts/flash' if flash.any? %>
+          <main container class="site-content">
+            <%= yield %>
+          </main>
+          <%= render 'layouts/footer' %>
+        </div>
+      </div>
+    </div>
   </div>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

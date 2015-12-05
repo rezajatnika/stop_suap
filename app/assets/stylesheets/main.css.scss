@@ -1,70 +1,72 @@
 // Global style
 a {
-    color: #525252;
-    transition: all ease 0.5s;
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    -o-transition: all ease 0.5s;
+  color: #525252;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
 
-    &:hover, :focus {
-        color: #000;
-        outline: none;
-    }
+  &:hover, :focus {
+    color: #000;
+    outline: none;
+  }
 }
 
 .container {
-    margin: 2rem;
+  margin: 2rem;
 }
 
 .border-right-double {
-    border-right: 4px double #000;
+  border-right: 4px double #000;
 }
 
 .border-left-double {
-    border-left: 4px double #000;
+  border-left: 4px double #000;
 }
+
 .border-bottom-double {
-    border-bottom: 4px double #000;
+  border-bottom: 4px double #000;
 }
+
 .border-top-double {
-    border-top: 4px double #000;
+  border-top: 4px double #000;
 }
+
 .border-right {
-    border-right: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 .border-left {
-    border-left: 1px solid #000;
+  border-left: 1px solid #000;
 }
 
 // Site Header
 
 .top-bar {
-    border-bottom: 3px solid #525252;
-    background: #fff;
-    height: 6rem;
-    padding: 1.7rem .5rem;
+  border-bottom: 3px solid #525252;
+  background: #fff;
+  height: 6rem;
+  padding: 1.7rem .5rem;
+
+  a {
+    color: #000;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .menu-text {
+    padding: 0;
+    margin-left: 2rem;
 
     a {
-        color: #000;
-
-        &:hover {
-            transform: scale(1.05);
-        }
+      transform: none;
     }
+  }
 
-    .menu-text {
-        padding: 0;
-        margin-left: 2rem;
-
-        a {
-            transform: none;
-        }
-    }
-
-    ul {
-        background: transparent;
-    }
+  ul {
+    background: transparent;
+  }
 }
 
 .logo {
@@ -73,17 +75,17 @@ a {
 }
 
 .nav {
-    text-align: right;
+  text-align: right;
 
-    li {
-        display: inline;
-        line-height: 4;
-        margin-left: 25px;
+  li {
+    display: inline;
+    line-height: 4;
+    margin-left: 25px;
 
-        &:first-of-type {
-            margin-left: 0;
-        }
+    &:first-of-type {
+        margin-left: 0;
     }
+  }
 }
 
 // End Site Header
@@ -91,28 +93,28 @@ a {
 // Masthead
 
 .masthead {
-    background-color: #C7C7C7;
-    padding: 1rem;
-    height: 8rem;
+  background-color: #C7C7C7;
+  padding: 1rem;
+  height: 8rem;
 }
 
 @media (min-width: 48em) {
-    .masthead {
-        padding: 1rem;
-    }
+  .masthead {
+      padding: 1rem;
+  }
 }
 
 .masthead-title {
-    margin-top: 0;
-    display: inline-block;
+  margin-top: 0;
+  display: inline-block;
 }
 
 #container-map {
-    height: calc( 100vh - 14rem);
+  height: calc( 100vh - 14rem);
 }
 
 #canvas-holder {
-    text-align: center;
+  text-align: center;
 }
 
 // End Masthead
@@ -122,13 +124,14 @@ a {
 .site-content {}
 
 .content_container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .comments {
-    margin-top: 40px;
+  margin-top: 40px;
 }
+
 .create-story {
   h3 {
     margin: 2rem 0;
@@ -137,38 +140,38 @@ a {
   }
 }
 .story {
-    margin: 3rem 0;
+  margin: 3rem 0;
 }
 
 .story-detail {
-    h3, small {
-        text-align: center;
-        display: block;
-    }
+  h3, small {
+      text-align: center;
+      display: block;
+  }
 
-    small {
-        margin-bottom: 3rem;
-    }
+  small {
+      margin-bottom: 3rem;
+  }
 
-    .columns {
-        padding-right: 4rem;
-    }
+  .columns {
+      padding-right: 4rem;
+  }
 }
 
 .index-control {
-    width: 60%;
-    margin: 3rem auto;
+  width: 60%;
+  margin: 3rem auto;
 
-    input {}
+  input {}
 
-    li {
-        margin-left: 3rem;
-    }
+  li {
+      margin-left: 3rem;
+  }
 }
 
 .index-report {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 .share-action{
   text-align: left;
@@ -191,23 +194,25 @@ a {
 // Form
 
 .form-field {
-    margin-top: 0px;
-    margin-bottom: 15px;
+  margin-top: 0px;
+  margin-bottom: 15px;
 }
 
 .login {
-    margin: 4rem 0;
+  margin: 4rem 0;
 
-    h3 {
-        text-align: center;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 4px double #000;
-    }
+  h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px double #000;
+  }
 }
+
 .wizard > .actions {
   text-align: center;
 }
+
 .wizard > .actions a {
   background: #000;
   border-radius: 0;
@@ -220,41 +225,46 @@ a {
     border-radius: 0;
   }
 }
+
 // End Form
 
 // Site Footer
 
 .site-footer {
-    font-size: .875em;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background: #000;
+  font-size: .875em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #000;
+  color: #fff;
+  height: 4.5rem;
+
+  a:hover {
     color: #fff;
-    height: 4.5rem;
-    a:hover {
-      color: #fff;
-    }
-    p {
-      margin-bottom: 0;
-      line-height: 4;
-    }
-    ul.right {
-      float: right;
-      margin-bottom: 0;
-      line-height: 4;
-        li {
-            display: inline;
-            margin-left: 20px;
+  }
 
-            &:first-of-type {
-                margin-left: 0;
-            }
+  p {
+    margin-bottom: 0;
+    line-height: 4;
+  }
 
-            &:last-of-type {
-                margin-right: 10px;
-            }
-        }
+  ul.right {
+    float: right;
+    margin-bottom: 0;
+    line-height: 4;
+
+    li {
+      display: inline;
+      margin-left: 20px;
+
+      &:first-of-type {
+          margin-left: 0;
+      }
+
+      &:last-of-type {
+          margin-right: 10px;
+      }
     }
+  }
 }
 
 // End Site Footer

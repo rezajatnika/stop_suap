@@ -1,27 +1,38 @@
-<%= form_for @story,:html => {:id => "report-wizard", :action => "", 'data-abide' => ""} do |f| %>
-    <h3></h3>
+<%= form_for @story do |f| %>
     <section>
-      <%= f.label :title, 'Judul' %>
-      <%= f.text_field :title, autofocus: true %>
-      <%= f.label :category_id, 'Kategori' %>
-      <%= f.select :category_id, Category.list_category, prompt: true %>
-      <%= f.label :content, 'Deskripsi' %>
-      <%= f.text_area :content, rows: 7 %>
+      <div class="form-field">
+        <%= f.label :title, 'Judul' %>
+        <%= f.text_field :title, autofocus: true %>
+      </div>
 
-    <div class="form-field">
-      <%= f.check_box :paid, {}, 'paid', 'notpaid' %>
-      <%= f.label :paid, 'Did you paid bribe?' %>
-    </div>
+      <div class="form-field">
+        <%= f.label :category_id, 'Kategori' %>
+        <%= f.select :category_id, Category.list_category, prompt: true %>
+      </div>
 
-    <div class="form-field">
-      <%= f.label :amount, "How much you've paid?" %>
-      <%= f.text_field :amount, data: { autonumeric: { aSign: 'Rp ', mDec: 0 } } %>
+      <div class="form-field">
+        <%= f.label :content, 'Deskripsi' %>
+        <%= f.text_area :content, rows: 7 %>
+      </div>
+
+      <div class="form-field">
+        <%= f.check_box :paid, {}, 'paid', 'notpaid' %>
+        <%= f.label :paid, 'Did you paid bribe?' %>
+      </div>
+
+      <div class="form-field">
+        <%= f.label :amount, "How much you've paid?" %>
+        <%= f.text_field :amount, data: { autonumeric: { aSign: 'Rp ', mDec: 0 } } %>
+      </div>
     </section>
-    <h3></h3>
+
     <section>
-      <%= f.label :event_date, 'When it happens?' %>
-      <%= f.text_field :event_date,
-        value: (@story.event_date.nil? ? Date.today.strftime('%e %B, %Y') : @story.event_date.strftime('%e %B, %Y')) %>
+      <div class="form-field">
+        <%= f.label :event_date, 'When it happens?' %>
+        <%= f.text_field :event_date,
+          value: (@story.event_date.nil? ? Date.today.strftime('%e %B, %Y') : @story.event_date.strftime('%e %B, %Y')) %>
+      </div>
+
       <%= f.fields_for :location, @story.location || @story.build_location do |field| %>
         <div class="row">
           <div class="columns small-6">
@@ -31,23 +42,25 @@
 
           <div class="columns small-6">
             <%= field.label :city_id %>
-            <%= field.grouped_collection_select :city_id, Province.all.order(:name), :cities, :name, :id, :name, prompt: true %>
+            <%= field.grouped_collection_select :city_id, Province.includes(:cities).all.order(:name),
+              :cities, :name, :id, :name, prompt: true %>
           </div>
         </div>
       <% end %>
     </section>
 
     <% unless current_user %>
-      <h3></h3>
       <section>
-      <div class="form-group">
+      <div class="form-field">
         <%= f.label :name, 'Your name' %>
         <%= f.text_field :name %>
       </div>
-        <div class="form-group">
+
+        <div class="form-field">
           <%= f.label :email, 'Your email address' %>
           <%= f.text_field :email %>
         </div>
       </section>
     <% end %>
+    <%= f.submit 'Submit', class: 'button' %>
 <% end %>

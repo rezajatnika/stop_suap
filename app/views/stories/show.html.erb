@@ -6,21 +6,28 @@
       <div class="content_container">
         <%= @story.content %>
       </div>
+    </div>
+
+    <div class="columns medium-3 float-left text-center">
+      <h5 class="subheader"><%= @story.category.name %></h5>
+      <h3><%= number_to_currency(@story.amount, unit: 'Rp ', precision: 0) %></h3>
+      <p class="subheader"><%= "#{@story.story_province}, #{@story.story_city}" %></p>
       <div class="share-action">
         <a href=""><span class="share s-fb"></span></a>
         <a href=""><span class="share s-twt"></span></a>
       </div>
     </div>
-    <div class="columns medium-3 float-left text-center">
-      <h5 class="subheader"><%= @story.category.name %></h5>
-      <h3><%= number_to_currency(@story.amount, unit: 'Rp ', precision: 0) %></h3>
-    </div>
   </div>
+
   <div class="row">
     <div class="columns medium-8 medium-offset-2">
-    <% if current_user %>
-      <%= render 'comment_form' %>
-    <% end %>
+      <div class="comments">
+        <h4>Komentar</h4>
+        <% if current_user %>
+          <%= render 'comment_form' %>
+        <% end %>
+      </div>
+
     <div id="comments">
       <%= render @comments  %>
     </div>

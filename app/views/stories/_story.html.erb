@@ -5,10 +5,11 @@
       <small>Diposting pada <%= story.created_at.strftime('%e %B, %Y') %> di <%= story.location.city.name %></small>
       <p><%= truncate(story.content, length: 160) { link_to " read more »", story } %></p>
     </div>
+
     <div class="columns medium-3 small-12 text-center">
       <p class="subheader"><%= story.category.name %></p>
-      <h3 class=""><%= number_to_currency(story.amount, unit: 'Rp. ', precision: 0) %></h3>
-      <p class="subheader">Bandung, Jawa barat</p>
+      <h3><%= number_to_currency(story.amount, unit: 'Rp. ', precision: 0) %></h3>
+      <p class="subheader"><%= "#{story.story_province}, #{story.story_city}" %></p>
     </div>
   </div>
 </div>

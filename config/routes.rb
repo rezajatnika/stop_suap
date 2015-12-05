@@ -21,23 +21,16 @@ Rails.application.routes.draw do
 
   # Account settings
   scope '/account' do
-    get 'settings', to: 'users#edit'
-    get 'change_password', to: 'settings/passwords#show'
+    get  'settings',        to: 'users#edit'
+    get  'change_password', to: 'settings/passwords#show'
     post 'change_password', to: 'settings/passwords#create'
   end
 
-  # Account settings
-  scope '/account' do
-    get 'settings', to: 'users#edit'
-    get 'change_password', to: 'settings/passwords#show'
-    post 'change_password', to: 'settings/passwords#create'
-  end
-
-  # Account settings
-  scope '/account' do
-    get 'settings', to: 'users#edit'
-    get 'change_password', to: 'settings/passwords#show'
-    post 'change_password', to: 'settings/passwords#create'
+  # Map data from Api
+  namespace :api do
+    namespace :v1 do
+      get 'map_data', to: 'locations#map_data'
+    end
   end
 
   # Mockups

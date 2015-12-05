@@ -13,6 +13,7 @@
  *= require foundation/foundation.css
  *= require pickadate.js/default.css
  *= require pickadate.js/default.date.css
+ *= require chosen/select2.css
  *= require social-share-button
  *= require_tree .
  *= require_self

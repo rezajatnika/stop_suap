@@ -16,8 +16,12 @@
 }
 
 .pagination {
+  text-align: center;
   .current {
     background: #000;
+  }
+  a{
+    display: inline-block;
   }
 }
 

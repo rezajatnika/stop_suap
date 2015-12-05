@@ -1,12 +1,9 @@
-<div class="comments">
-  <h4>Berikan Komentar</h4>
-  <%= form_for [@story, Comment.new] , remote: true, html: {class: "new_comment", id: "new_comment"} do |f| %>
-    <div class="form-field">
-      <%= f.text_area :body %>
-    </div>
+<%= form_for [@story, Comment.new], remote: true, html: { class: 'new_comment', id: 'new_comment' } do |f| %>
+  <div class="form-field">
+    <%= f.text_area :body, required: true %>
+  </div>
 
-    <div class="form-field">
-      <%= f.submit "submit", class: 'button button--sm button--pill'%>
-    </div>
-  <% end %>
-</div>
+  <div class="form-field">
+    <%= f.submit 'submit', class: 'button' %>
+  </div>
+<% end %>

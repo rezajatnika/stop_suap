@@ -24,6 +24,14 @@ class Story < ActiveRecord::Base
 
   enum paid: [:notpaid, :paid]
 
+  def story_province
+    location.province.name
+  end
+
+  def story_city
+    location.city.name
+  end
+
   private
 
   def set_user

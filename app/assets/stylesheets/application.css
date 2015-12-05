@@ -11,7 +11,6 @@
  * file per style scope.
  *
  *= require foundation.min
- *= require jquery.steps
  *= require pickadate.js/default.css
  *= require pickadate.js/default.date.css
  *= require_tree .

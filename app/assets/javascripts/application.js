@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery.steps.min
-//= require jquery.validate.min
 //= require foundation.min
 //= require pickadate.js/picker.js
 //= require pickadate.js/picker.date.js

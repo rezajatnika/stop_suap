@@ -1,4 +1,12 @@
-require 'carmen'
+require 'csv'
+
+CSV.foreach("db/csv/provinsi.csv", { encoding: "UTF-8", headers: true, header_converters: :symbol, converters: :all}) do |row|
+  Province.create(row.to_hash)
+end
+
+CSV.foreach("db/csv/kota_dan_kabupaten.csv", { encoding: "UTF-8", headers: true, header_converters: :symbol, converters: :all}) do |row|
+  City.create(row.to_hash)
+end
 
 # User for guest stories
 User.create(
@@ -18,61 +26,8 @@ User.create(
   )
 end
 
-# Locations
-id = Carmen::Country.named('Indonesia')
-
-# Provinces seed
-jawa = id.subregions.named('Jawa')
-jawa.subregions.each do |province|
-  Province.create(name: province.name, code: "id-#{province.code.downcase}" )
-  puts "#{province} created"
-
-end
-
-papua = id.subregions.named('Papua')
-papua.subregions.each do |province|
-  Province.create(name: province.name, code: "id-#{province.code.downcase}" )
-  puts "#{province} created"
-end
-
-kalimantan = id.subregions.named('Kalimantan')
-kalimantan.subregions.each do |province|
-  Province.create(name: province.name, code: "id-#{province.code.downcase}" )
-  puts "#{province} created"
-end
-
-sumatera = id.subregions.named('Sumatera')
-sumatera.subregions.each do |province|
-  Province.create(name: province.name, code: "id-#{province.code.downcase}" )
-  puts "#{province} created"
-end
-
-nusa = id.subregions.named('Nusa Tenggara')
-nusa.subregions.each do |province|
-  Province.create(name: province.name, code: "id-#{province.code.downcase}" )
-  puts "#{province} created"
-end
-
-maluku = id.subregions.named('Maluku')
-maluku.subregions.each do |province|
-  Province.create(name: province.name, code: "id-#{province.code.downcase}" )
-  puts "#{province} created"
-end
-
-sulawesi = id.subregions.named('Sulawesi')
-sulawesi.subregions.each do |province|
-  Province.create(name: province.name, code: "id-#{province.code.downcase}" )
-  puts "#{province} created"
-end
-
 jawa_barat = Province.find_by_name('Jawa Barat')
-jawa_barat.cities.create(
-  [
-    { name: 'Kota Bandung' },
-    { name: 'Kota Cimahi' },
-    { name: 'Kabupaten Bandung Barat' }
-  ]
-)
+
 
 Category.create(
   [

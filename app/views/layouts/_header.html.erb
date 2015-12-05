@@ -1,6 +1,6 @@
 <div class="top-bar">
   <div class="top-bar-left">
-    <div class="menu-text"><h3><%= link_to 'Stop Suap', root_path %></h3></div>
+    <div data-no-turbolink class="menu-text"><h3><%= link_to 'Stop Suap', root_path %></h3></div>
   </div>
   <div class="top-bar-right">
     <ul class="menu">
@@ -13,5 +13,6 @@
         <li><%= link_to 'Masuk', login_path %></li>
       <% end %>
     </ul>
+    <button type="button" class="button" data-toggle="offCanvas">Open Menu</button>
   </div>
 </div>

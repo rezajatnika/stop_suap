@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20151203154402) do
 
   create_table "provinces", force: :cascade do |t|
     t.string   "name"
+    t.string   "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

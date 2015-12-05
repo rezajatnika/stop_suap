@@ -4,7 +4,7 @@ class StoriesController < ApplicationController
   end
 
   def show
-    @story = Story.find(params[:id])
+    @story    = Story.find(params[:id])
     @comments = @story.comments
   end
 
@@ -14,8 +14,9 @@ class StoriesController < ApplicationController
 
   def index
     @stories = Story.includes(:category, location: [:city, :province]).all
-    @search = Story.ransack(params[:q])
-    @stories = @search.result.includes(:category, :location)
+    @search  = Story.ransack(params[:q])
+    @stories = @search.result.includes(:category,
+      location: [:city, :province])
   end
 
   def create

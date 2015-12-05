@@ -1,3 +1,6 @@
+// Import font
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+$font-stack: Merriweather;
 /*********************
 BREAKPOINTS
 *********************/
@@ -21,7 +24,14 @@ BREAKPOINTS
   }
 }
 // Global style
+body{
+  font-family: 100% $font-stack !important;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-stack;
+}
 a {
+  font-family: $font-stack;
   color: #525252;
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
@@ -36,6 +46,9 @@ a {
 
 .container {
   margin: 2rem;
+  @include breakpoint(xsmall){
+    margin: 1rem;
+  }
 }
 
 .border-right-double {
@@ -61,29 +74,71 @@ a {
 .border-left {
   border-left: 1px solid #000;
 }
+.border-left-grey {
+  border-left: 1px solid #8E8E8E;
+}
 
 // Site Header
 
 .top-bar {
-  border-bottom: 3px solid #525252;
-  background: #fff;
+  background: #302f2f;
   height: 6rem;
-  padding: 1.7rem .5rem;
+  position: static;
+  padding: 0;
   @include breakpoint(xsmall){
     height: 3rem;
-    padding: .5rem;
+    padding: 0;
   }
   a {
-    color: #000;
-    &:hover {
-      transform: scale(1.05);
+    color: #fff;
+  }
+  .top-bar-right {
+    height: 100%;
+    padding: 2.5rem;
+    @include breakpoint(xsmall) {
+      display: inline-block;
+      float: right;
+      margin: .5rem;
+    }
+    a{
+      color: #686868;
+      padding: 0 1rem!important;
+      &:hover{
+        color: #fff;
+      }
+    }
+    ul.menu {
+      @include breakpoint(xsmall) {
+        display: none;
+      }
+    }
+    .off-canvas-toggle{
+      @include breakpoint(xsmall) {
+        display: inline-block;
+      }
     }
   }
-
+  .top-bar-left {
+    height: 100%;
+    width: 20%;
+    padding: 1.5rem;
+    background: #B80f0f;
+    @include breakpoint(xsmall) {
+      display: inline-block;
+      float: left;
+      padding: 0;
+      text-align: center;
+      width: 40%;
+    }
+  }
   .menu-text {
     padding: 0;
     margin-left: 2rem;
-
+    @include breakpoint(xsmall){
+      margin-left: 0;
+      height: 100%;
+      padding: .6rem;
+    }
     a {
       transform: none;
     }
@@ -93,28 +148,7 @@ a {
     background: transparent;
   }
 }
-.top-bar-right {
-  @include breakpoint(xsmall) {
-    display: inline-block;
-    float: right;
-  }
-  ul.menu {
-    @include breakpoint(xsmall) {
-      display: none;
-    }
-  }
-  .off-canvas-toggle{
-    @include breakpoint(xsmall) {
-      display: inline-block;
-    }
-  }
-}
-.top-bar-left {
-  @include breakpoint(xsmall) {
-    display: inline-block;
-    float: left;
-  }
-}
+
 .logo {
     font-size: 22px;
     margin-bottom: 0;
@@ -167,9 +201,28 @@ button.off-canvas-toggle{
 // Masthead
 
 .masthead {
-  background-color: #C7C7C7;
+  background-color: #B80f0f;
   padding: 1rem;
   height: 8rem;
+  color: #fff;
+  .button{
+    font-size: 2rem;
+    margin: -0.5rem;
+  }
+  @include breakpoint(xsmall){
+    position: absolute;
+    top: calc( 100vh - 11rem );
+    padding: 0;
+    text-align: center;
+    h4{
+      font-size: 1rem;
+    }
+    a.button.large{
+      float: none!important;
+      font-size: 1rem;
+      padding: .5rem;
+    }
+  }
 }
 
 @media (min-width: 48em) {
@@ -197,7 +250,32 @@ button.off-canvas-toggle{
 // End Masthead
 
 // Site Content
-
+.process{
+  text-align: center;
+  margin: 10rem 5rem;
+  .columns{
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  .process-title{
+    color: #B80f0f;
+  }
+  img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #B80f0f;
+  }
+}
+span.stripe{
+  height: 3px;
+  width: 15px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background: #B80f0f;
+}
 .site-content {}
 
 .content_container {
@@ -311,7 +389,7 @@ button.off-canvas-toggle{
   font-size: .875em;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: #000;
+  background: #302f2f;
   color: #fff;
   height: 4.5rem;
 

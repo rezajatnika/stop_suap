@@ -1,19 +1,44 @@
 $offcanvas-size: 100%;
+@mixin breakpoint($point) {
+   @if $point == xlarge {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == large {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == medium {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == small {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == xsmall {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
+}
 
 .headline {
+  h3{
+    text-align: center;
+  }
   .columns {
-    padding: 0 4rem;
+    padding: 0 3rem;
+    margin-bottom: 2rem;
+    @include breakpoint(xsmall){
+      padding: .5rem;
+    }
   }
 }
 
 .button {
   background: transparent;
-  border: 4px double #000;
+  border: 1px solid #fff;
   padding: 0.5rem 1rem;
-  color: #000;
+  color: #fff;
   &:hover {
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #E81C1C;
   }
 }
 

@@ -1,6 +1,6 @@
 <div class="top-bar">
   <div class="top-bar-left">
-    <div data-no-turbolink class="menu-text"><h3><%= link_to 'Stop Suap', root_path %></h3></div>
+    <div data-no-turbolink class="menu-text"><h3><%= link_to 'STOPSUAP', root_path %></h3></div>
   </div>
   <div class="top-bar-right">
     <ul class="menu">
@@ -8,9 +8,9 @@
       <li><%= link_to 'Laporan', stories_path %></li>
       <li><%= link_to 'Buat Laporan', new_story_path %></li>
       <% if current_user  %>
-        <li><%= link_to 'Keluar', logout_path, method: :delete %></li>
+        <li class="border-left-grey"><%= link_to 'Keluar', logout_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to 'Masuk', login_path %></li>
+        <li class="border-left-grey"><%= link_to 'Masuk', login_path %></li>
       <% end %>
     </ul>
     <button class="off-canvas-toggle" data-toggle="offCanvas">.</button>

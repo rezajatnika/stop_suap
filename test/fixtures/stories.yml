@@ -9,3 +9,13 @@
 #
 # two: {}
 #  column: value
+
+first:
+  title: No title
+  content: Some content
+  category: tax
+  paid: 1
+  amount: 125000
+  event_date: <%= Date.today %>
+  name: Jane Doe
+  email: janedoe@email.net

@@ -14,7 +14,7 @@ class CommentTest < ActiveSupport::TestCase
         province_id: provinces(:westjava).id
       }
     )
-    @comment = @story.comments.new(body: "blabala")
+    @comment = @story.comments.new(body: 'blabala')
   end
 
   def teardown

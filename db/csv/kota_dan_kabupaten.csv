@@ -1,0 +1,877 @@
+name ,province_id
+
+Kota Langsa,1
+
+Kota Lhokseumawe,1
+
+Kota Sabang,1
+
+Kota Banda Aceh,1
+
+Kab. Bener Meriah,1
+
+Kab. Aceh Tamiang,1
+
+Kab. Nagan Jaya,1
+
+Kab. Aceh Jaya,1
+
+Kab. Gayo Lues,1
+
+Kab. Aceh Barat Daya,1
+
+Kab. Bireun,1
+
+Kab. Aceh Sangkil,1
+
+Kab. Simeulue,1
+
+Kab. Aceh Utara,1
+
+Kab. Pidie,1
+
+Kab. Aceh Besar,1
+
+Kab. Aceh Barat,1
+
+Kab. Tengah,1
+
+Kab. Aceh Timur,1
+
+Kab. Aceh Tenggara,1
+
+Kab. Aceh Selatan,1
+
+Kota Padang Sidempuan,2
+
+Kota Tebing Tinggi,2
+
+Kota Binjai,2
+
+Kota Tanjung Balai,2
+
+Kota Sibolga,2
+
+Kota Pematang Siantar,2
+
+Kota Medan,2
+
+Kab. Serdang Bedagai,2
+
+Kab. Samosir,2
+
+Kab. Humbang Hasundutan,2
+
+Kab. Pakpak Barat,2
+
+Kab. Nias Selatan,2
+
+Kab. Mandailing Natal,2
+
+Kab. Toba Samosir,2
+
+Kab. Dairi,2
+
+Kab. Labuhan Batu,2
+
+Kab. Asahan,2
+
+Kab. Simalungun,2
+
+Kab. Deli Serdang,2
+
+Kab. Karo,2
+
+Kab. Langkat,2
+
+Kab. Nias,2
+
+Kab. Tapanuli Selatan,2
+
+Kab. Tapanuli Utara,2
+
+Kab. Tapanuli Tengah,2
+
+Kota Pariaman,3
+
+Kota Payakumbuh,3
+
+Kota Bukittinggi,3
+
+Kota Padang Panjang,3
+
+Kota Sawahlunto,3
+
+Kota Solok,3
+
+Kota Padang,3
+
+Kab. Pasaman Barat,3
+
+Kab. Solok Selatan,3
+
+Kab. Dharmasraya,3
+
+Kab. Kepulauan Mentawai,3
+
+Kab. Pasaman,3
+
+Kab. Lima Puluh Kota,3
+
+Kab. Agam,3
+
+Kab. Padang Pariaman,3
+
+Kab. Tanah Datar,3
+
+Kab. Sawahlunto,3
+
+Kab. Solok,3
+
+Kab. Pesisir Selatan,3
+
+Kota Dumai,4
+
+Kota Pekanbaru,4
+
+Kab. Kuantan Singingi,4
+
+Kab. Siak,4
+
+Kab. Rokan Hilir,4
+
+Kab. Rokan Hulu,4
+
+Kab. Pelalawan,4
+
+Kab. Indragiri Hilir,4
+
+Kab. Bengkalis,4
+
+Kab. Indragiri Hulu,4
+
+Kab. Kampar,4
+
+Kota Jambi,5
+
+Kab. Kerinci,5
+
+Kab. Tebo,5
+
+Kab. Bungo,5
+
+Kab. Tanjung Jabung Timur,5
+
+Kab. Tanjung Jabung Barat,5
+
+Kab. Muaro Jambi,5
+
+Kab. Batanghari,5
+
+Kota Prabumulih,6
+
+Kota Lubuk Linggau,6
+
+Kota Pagar Alam,6
+
+Kota Palembang,6
+
+Kab. Ogan Ilir,6
+
+Kab. Oku Selatan,6
+
+Kab. Oku Timur,6
+
+Kab. Banyuasin,6
+
+Kab. Musi Banyuasin,6
+
+Kab. Musi Rawas,6
+
+Kab. Lahat,6
+
+Kab. Muara Enim,6
+
+Kab. Ogan Komering Ilir,6
+
+Kab. Ogan Komering Ulu,6
+
+Kota Bengkulu,7
+
+Kab. Kepahiang,7
+
+Kab. Lebong,7
+
+Kab. Muko Muko,7
+
+Kab. Saluma,7
+
+Kab. Kaur,7
+
+Kab. Bengkulu Utara,7
+
+Kab. Rejang Lebong,7
+
+Kab. Bengkulu Selatan,7
+
+Kota Metro,8
+
+Kota Bandar Lampung,8
+
+Kab. Way Kanan,8
+
+Kab. Lampung Timur,8
+
+Kab. Tanggamus,8
+
+Kab. Tulang Bawang,8
+
+Kab. Lampung Barat,8
+
+Kab. Lampung Utara,8
+
+Kab. Lampung Tengah,8
+
+Kab. Lampung Selatan,8
+
+Kota Pangkal Pinang,9
+
+Kab. Bangka Timur,9
+
+Kab. Bangka Barat,9
+
+Kab. Bangka Tengah,9
+
+Kab. Bangka Selatan,9
+
+Kab. Belitung,9
+
+Kab. Bangka,9
+
+Kota Tanjung Pinang,10
+
+Kota Batam,10
+
+Kab. Lingga,10
+
+Kab. Natuna,10
+
+Kab. Karimun,10
+
+Kab. Kepulauan Riau,10
+
+Kodya Jakarta Timur,11
+
+Kodya Jakarta Selatan,11
+
+Kodya Jakarta Barat,11
+
+Kodya Jakarta Utara,11
+
+Kodya Jakarta Pusat,11
+
+Kab. Adm. Kep. Seribu,11
+
+Kota Banjar,12
+
+Kota Tasikmalaya,12
+
+Kota Cimahi,12
+
+Kota Depok,12
+
+Kota Bekasi,12
+
+Kota Cirebon,12
+
+Kota Bandung,12
+
+Kota Sukabumi,12
+
+Kota Bogor,12
+
+Kab. Bekasi,12
+
+Kab. Karawang,12
+
+Kab. Purwakarta,12
+
+Kab. Subang,12
+
+Kab. Indramayu,12
+
+Kab. Sumedang,12
+
+Kab. Majalengka,12
+
+Kab. Cirebon,12
+
+Kab. Kuningan,12
+
+Kab. Ciamis,12
+
+Kab. Tasikmalaya,12
+
+Kab. Garut,12
+
+Kab. Bandung,12
+
+Kab. Cianjur,12
+
+Kab. Sukabumi,12
+
+Kab. Bogor,12
+
+Kota Tegal,13
+
+Kota Pekalongan,13
+
+Kota Semarang,13
+
+Kota Salatiga,13
+
+Kota Surakarta,13
+
+Kota Magelang,13
+
+Kab. Brebes,13
+
+Kab. Tegal,13
+
+Kab. Pemalang,13
+
+Kab. Pekalongan,13
+
+Kab. Batang,13
+
+Kab. Kendal,13
+
+Kab. Temanggung,13
+
+Kab. Semarang,13
+
+Kab. Demak,13
+
+Kab. Jepara,13
+
+Kab. Kudus,13
+
+Kab. Pati,13
+
+Kab. Rembang,13
+
+Kab. Blora,13
+
+Kab. Grobogan,13
+
+Kab. Sragen,13
+
+Kab. Karanganyar,13
+
+Kab. Wonogiri,13
+
+Kab. Sukoharjo,13
+
+Kab. Klaten,13
+
+Kab. Boyolali,13
+
+Kab. Magelang,13
+
+Kab. Wonosobo,13
+
+Kab. Purworejo,13
+
+Kab. Kebumen,13
+
+Kab. Banjarnegara,13
+
+Kab. Purbalingga,13
+
+Kab. Banyumas,13
+
+Kab. Cilacap,13
+
+Kota Yogyakarta,14
+
+Kab. Sleman,14
+
+Kab. Gunung Kidul,14
+
+Kab. Bantul,14
+
+Kab. Kulon Progo,14
+
+Batu,15
+
+Kota Surabaya,15
+
+Kota Madiun,15
+
+Kota Mojokerto,15
+
+Kota Pasuruan,15
+
+Kota Probolinggo,15
+
+Kota Malang,15
+
+Kota Blitar,15
+
+Kota Kediri,15
+
+Kab. Sumenep,15
+
+Kab. Pamekasan,15
+
+Kab. Sampang,15
+
+Kab. Bangkalan,15
+
+Kab. Gresik,15
+
+Kab. Lamongan,15
+
+Kab. Tuban,15
+
+Kab. Bojonegoro,15
+
+Kab. Ngawi,15
+
+Kab. Magetan,15
+
+Kab. Madiun,15
+
+Kab. Nganjuk,15
+
+Kab. Jombang,15
+
+Kab. Mojokerto,15
+
+Kab. Sidoarjo,15
+
+Kab. Pasuruan,15
+
+Kab. Probolinggo,15
+
+Kab. Situbondo,15
+
+Kab. Bondowoso,15
+
+Kab.Banyuwangi,15
+
+Kab. Jember,15
+
+Kab. Lumajang,15
+
+Kab. Malang,15
+
+Kab. Kediri,15
+
+Kab. Blitar,15
+
+Kab. Tulungagung,15
+
+Kab. Trenggalek,15
+
+Kab. Ponorogo,15
+
+Kab. Pacitan,15
+
+Kota Cilegon,16
+
+Kota Tangerang,16
+
+Kab. Serang,16
+
+Kab. Tangerang,16
+
+Kab. Lebak,16
+
+Kab. Pandenglang,16
+
+Kota Denpasar,17
+
+Kab. Buleleng,17
+
+Kab. Karangasem,17
+
+Kab. Bangli,17
+
+Kab. Klungkung,17
+
+Kab. Gianyar,17
+
+Kab. Badung,17
+
+Kab. Tabanan,17
+
+Kab. Jembarana,17
+
+Kota Bima,18
+
+Kota Mataram,18
+
+Kab. Sumbawa Barat,18
+
+Kab. Bima,18
+
+Kab. Dompu,18
+
+Kab. Sumbawa,18
+
+Kab. Lombok Timur,18
+
+Kab. Lombok Tengah,18
+
+Kab. Lombok Barat,18
+
+Kota Kupang,19
+
+Kab. Manggarai Barat,19
+
+Kab. Rote Ndao,19
+
+Kab. Lembata,19
+
+Kab. Sumba Barat,19
+
+Kab. Sumba Timur,19
+
+Kab. Manggarai,19
+
+Kab. Ngada,19
+
+Kab. Ende,19
+
+Kab. Sikka,19
+
+Kab. Flores Timur,19
+
+Kab. Alor,19
+
+Kab. Belu,19
+
+Kab. Timor Tengah Utara,19
+
+Kab. Timor tengah Selatan,19
+
+Kab. Kupang,19
+
+Kota Singkawang,20
+
+Kota Pontianak,20
+
+Kab. Sekadu,20
+
+Kab. Melawi,20
+
+Kab. Landak,20
+
+Kab. Bengkayang,20
+
+Kab. Kapuas Hulu,20
+
+Kab. Sintang,20
+
+Kab. Ketapang,20
+
+Kab. Sanggau,20
+
+Kab. Pontianak,20
+
+Kab. Sambas,20
+
+Kota Palangkaraya,21
+
+Kab. Barito Timur,21
+
+Kab. Murung Raya,21
+
+Kab. Pulang Pisau,21
+
+Kab. Gunung Mas,21
+
+Kab. Lamandau,21
+
+Kab. Sukamara,21
+
+Kab. Seruyan,21
+
+Kab. Katingin,21
+
+Kab. Barito Utara,21
+
+Kab. Barito Selatan,21
+
+Kab. Kapuas,21
+
+Kab. Kotawaringin Timur,21
+
+Kab. Kotawaringin Barat,21
+
+Kota Banjarbaru,22
+
+Kota Banjarmasin,22
+
+Kab. Balangan,22
+
+Kab. Tanah Bambu,22
+
+Kab. Tabalong,22
+
+Kab. Hulu Sungai Utara,22
+
+Kab. Hulu Sungai Tengah,22
+
+Kab. Hulu Sungai Selatan,22
+
+Kab. Tapin,22
+
+Kab. Barito Kuala,22
+
+Kab. Banjar,22
+
+Kab. Kotabaru,22
+
+Kab. Tanah Laut,22
+
+Kota Bontang,23
+
+Kota Tarakan,23
+
+Kota Samarinda,23
+
+Kota Balikpapan,23
+
+Kab. Penajam Paser Utara,23
+
+Kab. Kutai Timur,23
+
+Kab. Kutai Barat,23
+
+Kab. Malinau,23
+
+Kab. Nunukan,23
+
+Kab. Bulungan,23
+
+Kab. Berau,23
+
+Kab. Kutai Kertanegara,23
+
+Kab. Pasir,23
+
+Kota Tomohon,24
+
+Kota Bitung,24
+
+Kota Manado,24
+
+Kab. Minahasa Utara,24
+
+Kab. Minahasa Selatan,24
+
+Kab. Kepulauan Talaud,24
+
+Kab. Kepulauan Sangihe,24
+
+Kab. Minahasa,24
+
+Kab. Bolaang Mangondow,24
+
+Kota Palu,25
+
+Kab. Tajo Una Una,25
+
+Kab. Parigi Moutong,25
+
+Kab. Banggai Kepulauan,25
+
+Kab. Morowali,25
+
+Kab. Buol,25
+
+Kob. Toloi Toli,25
+
+Kab. Donggala,25
+
+Kab. Paso,25
+
+Kab. Banggai,25
+
+Kota Palopo,26
+
+Kota Pare Pare,26
+
+Kota Makassar,26
+
+Kab. Luwu Timur,26
+
+Kab. Luwu Utara,26
+
+Kab. Tana Toraja,26
+
+Kab. Luwu,26
+
+Kab. Enrekang,26
+
+Kab. Pinrang,26
+
+Kab. Sidenreng Rapang,26
+
+Kab. Wajo,26
+
+Kab. Soppeng,26
+
+Kab. Barru,26
+
+Kab. Pangkajene Kep.,26
+
+Kab. Maros,26
+
+Kab. Bone,26
+
+Kab. Sinjai,26
+
+Kab. Gowa,26
+
+Kab. Takalar,26
+
+Kab. Jeneponto,26
+
+Kab. Bantaeng,26
+
+Kab. Bulukumba,26
+
+Kab. Selayar,26
+
+Kota Bau Bau,27
+
+Kota Kendari,27
+
+Kab. Kolaka Utara,27
+
+Kab. Wakatobi,27
+
+Kab. Bombana,27
+
+Kab. Konawe Selatan,27
+
+Kab. Buton,27
+
+Kab. Muna,27
+
+Kab. Konawe,27
+
+Kab. Kolaka,27
+
+Kota Gorontalo,28
+
+Kab. Pahuwato,28
+
+Kab. Bone Bolango,28
+
+Kab. Boalemo,28
+
+Kab. Gorontalo,28
+
+Kab. Majene,29
+
+Kab. Polowali Mamasa,29
+
+Kab. Mamasa,29
+
+Kab. Mamuju,29
+
+Kab. Mamuju Utara,29
+
+Kota Ambon,30
+
+Kab. Kepulauan Aru,30
+
+Kab. Seram Bagian Barat,30
+
+Kab. Seram Bagian Timur,30
+
+Kab. Buru,30
+
+Kab. Maluku Tenggara Barat,30
+
+Kab. Maluku Tenggara,30
+
+Kab. Maluku Tengah,30
+
+Kota Tidore Kepulauan,31
+
+Kota Ternate,31
+
+Kab. Halmahera Timur,31
+
+Kab. Kepulauan Sula,31
+
+Kab. Halmahera Selatan,31
+
+Kab. Halmahera Utara,31
+
+Kab. Halmahera Tengah,31
+
+Kab. Halmahera Barat,31
+
+Kota Jayapura,32
+
+Kab. Supiori,32
+
+Kab. Asmat,32
+
+Kab. Mappi,32
+
+Kab. Boven Digoel,32
+
+Kab. Waropen,32
+
+Kab. Tolikara,32
+
+Kab. Yahukimo,32
+
+Kab. Pegunungan Bintang,32
+
+Kab. Keerom,32
+
+Kab. Sarmi,32
+
+Kab. Timika,32
+
+Kab. Paniai,32
+
+Kab. Puncak Jaya,32
+
+Kab. Biak Numfor,32
+
+Kab. Yapen Waropen,32
+
+Kab. Nabire,32
+
+Kab. Jayapura,32
+
+Kab. Jayawijaya,32
+
+Kab. Merauke,32
+
+Kota Sorong,33
+
+Kab. Kaima,33
+
+Kab. Teluk Wondama,33
+
+Kab. Teluk Bentuni,33
+
+Kab. Raja Ampat,33
+
+Kab. Sorong Selatan,33
+
+Kab. Fak Fak,33
+
+Kab. Monokwari,33
+
+Kab. Sorong,33

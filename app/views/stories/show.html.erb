@@ -6,10 +6,11 @@
       <div class="content_container">
         <%= @story.content %>
       </div>
-      <div class="share-action">
+      <%= social_share_button_tag(@story.title, popup: true) %>
+      <!-- <div class="share-action">
         <a href=""><span class="share s-fb"></span></a>
         <a href=""><span class="share s-twt"></span></a>
-      </div>
+      </div> -->
     </div>
     <div class="columns medium-3 float-left text-center">
       <h5 class="subheader"><%= @story.category.name %></h5>

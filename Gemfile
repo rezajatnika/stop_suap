@@ -12,6 +12,7 @@ gem 'bcrypt',            '3.1.10'
 gem 'autonumeric-rails', '1.9.39'
 gem 'carmen',            '1.0.2'
 gem 'ransack',           '1.7.0'
+gem 'social-share-button'
 
 group :doc do
   gem 'sdoc', '0.4.1'

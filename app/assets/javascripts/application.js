@@ -19,4 +19,5 @@
 //= require pickadate.js/picker.js
 //= require pickadate.js/picker.date.js
 //= require autonumeric
+//= require social-share-button
 //= require main

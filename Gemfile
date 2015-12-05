@@ -13,7 +13,6 @@ gem 'autonumeric-rails', '1.9.39'
 gem 'ransack',           '1.7.0'
 gem 'faker',             '1.6.1'
 gem 'will_paginate',     '3.0.6'
-gem 'parallel'
 gem 'social-share-button'
 
 group :doc do

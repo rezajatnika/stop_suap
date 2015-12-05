@@ -1,3 +1,25 @@
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == xlarge {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == large {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == medium {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == small {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == xsmall {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
+}
 // Global style
 a {
   color: #525252;
@@ -47,7 +69,10 @@ a {
   background: #fff;
   height: 6rem;
   padding: 1.7rem .5rem;
-
+  @include breakpoint(xsmall){
+    height: 3rem;
+    padding: .5rem;
+  }
   a {
     color: #000;
     &:hover {
@@ -68,12 +93,61 @@ a {
     background: transparent;
   }
 }
-
+.top-bar-right {
+  @include breakpoint(xsmall) {
+    display: inline-block;
+    float: right;
+  }
+  ul.menu {
+    @include breakpoint(xsmall) {
+      display: none;
+    }
+  }
+  .off-canvas-toggle{
+    @include breakpoint(xsmall) {
+      display: inline-block;
+    }
+  }
+}
+.top-bar-left {
+  @include breakpoint(xsmall) {
+    display: inline-block;
+    float: left;
+  }
+}
 .logo {
     font-size: 22px;
     margin-bottom: 0;
 }
-
+button.off-canvas-toggle{
+  background:url('toggle.svg') center no-repeat;
+  background-size: contain;
+  color: transparent;
+  width: 2rem;
+  height: 2rem;
+  display: none;
+}
+.off-menu{
+  background: #000;
+  margin: 0;
+  padding: 5px 0 0 5px; 
+  height: 100%; 
+  width: 100%;
+  position:fixed;
+  left:0;
+  top:0;
+  a{
+    color: #fff;
+    &:focus, &:active{
+      color: #fff;
+    }
+  }
+  li{
+    display: block;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+}
 .nav {
   text-align: right;
 
@@ -111,6 +185,9 @@ a {
 
 #container-map {
   height: calc( 100vh - 14rem);
+  @include breakpoint(xsmall){
+    display: none;
+  }
 }
 
 #canvas-holder {
@@ -268,3 +345,5 @@ a {
 }
 
 // End Site Footer
+
+//media queries

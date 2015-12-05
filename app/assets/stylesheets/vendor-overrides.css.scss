@@ -1,3 +1,5 @@
+$offcanvas-size: 100%;
+
 .headline {
   .columns {
     padding: 0 4rem;
@@ -87,4 +89,17 @@
       }
     }
   }
+}
+.off-canvas.position-left{
+  height: 100%;
+  width: 100%;
+}
+.off-canvas-content{
+  box-shadow: none;
+}
+.is-open-left{
+  transform: translateX($offcanvas-size);
+}
+.off-canvas.position-left{
+  left: -($offcanvas-size);
 }

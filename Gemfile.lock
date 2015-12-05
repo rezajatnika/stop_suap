@@ -53,8 +53,6 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (6.0.2)
-    carmen (1.0.2)
-      activesupport (>= 3.0.0)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -188,7 +186,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    will_paginate (3.0.7)
+    will_paginate (3.0.6)
 
 PLATFORMS
   ruby
@@ -199,7 +197,6 @@ DEPENDENCIES
   bcrypt (= 3.1.10)
   better_errors (= 2.1.1)
   byebug (= 6.0.2)
-  carmen (= 1.0.2)
   faker (= 1.6.1)
   hirb (= 0.7.3)
   jquery-rails (= 4.0.5)
@@ -218,7 +215,7 @@ DEPENDENCIES
   turbolinks (= 2.5.3)
   uglifier (= 2.7.2)
   web-console (= 2.2.1)
-  will_paginate (~> 3.0.6)
+  will_paginate (= 3.0.6)
 
 BUNDLED WITH
    1.10.6

@@ -38,8 +38,11 @@ $(document).on('ready page:load', function() {
   });
 });
 
+$('#story_category_id').select2();
+$('#story_location_attributes_province_id').select2();
+$('#story_location_attributes_city_id').select2();
+
 // Filter cities by province
 // $(function() {
 //   filterCityList();
 // });
-

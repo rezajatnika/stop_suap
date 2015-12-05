@@ -13,10 +13,11 @@ class StoriesController < ApplicationController
   end
 
   def index
-    @stories = Story.includes(:category, location: [:city, :province]).all.paginate(:page => params[:page], :per_page => 10)
+    @stories = Story.includes(:category, location: [:city, :province]).all
+      .paginate(page: params[:page], per_page: 10)
     @search  = Story.ransack(params[:q])
-    @stories = @search.result.includes(:category,
-      location: [:city, :province]).paginate(:page => params[:page], :per_page => 10)
+    @stories = @search.result.includes(:category, location: [:city, :province])
+      .paginate(page: params[:page], per_page: 10)
   end
 
   def create

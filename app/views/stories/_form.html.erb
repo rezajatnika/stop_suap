@@ -35,12 +35,12 @@
 
       <%= f.fields_for :location, @story.location || @story.build_location do |field| %>
         <div class="row">
-          <div class="columns small-6">
+          <div class="columns small-6 form-field">
             <%= field.label :province_id %>
             <%= field.collection_select :province_id, Province.all, :id, :name, prompt: true %>
           </div>
 
-          <div class="columns small-6">
+          <div class="columns small-6 form-field">
             <%= field.label :city_id %>
             <%= field.grouped_collection_select :city_id, Province.includes(:cities).all.order(:name),
               :cities, :name, :id, :name, prompt: true %>

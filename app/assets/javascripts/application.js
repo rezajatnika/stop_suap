@@ -16,6 +16,7 @@
 //= require foundation/foundation.js
 //= require pickadate.js/picker.js
 //= require pickadate.js/picker.date.js
+//= require chosen/select2.full.js
 //= require autonumeric
 //= require social-share-button
 //= require main

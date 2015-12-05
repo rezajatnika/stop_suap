@@ -19,4 +19,6 @@
 //= require pickadate.js/picker.js
 //= require pickadate.js/picker.date.js
 //= require autonumeric
-//= require main
+//= require highmaps/highmaps.src.js
+//= require id-all
+//= require_tree .

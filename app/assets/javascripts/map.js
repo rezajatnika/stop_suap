@@ -1,5 +1,4 @@
-var map;
-map = function() {
+$(function() {
     // Prepare demo data
     var data = [
         {
@@ -186,14 +185,4 @@ map = function() {
             }
         }]
     });
-};
-window.onload = function(){
-    $(document).map(map);
-    var ctx = document.getElementById("chart-area").getContext("2d");
-    window.myPie = new Chart(ctx).Pie(pieData);
-};
-$(document).on('page:load', map);
-$(document).on('page:load', function(){
-    var ctx = document.getElementById("chart-area").getContext("2d");
-    window.myPie = new Chart(ctx).Pie(pieData);
 });

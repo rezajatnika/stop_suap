@@ -204,8 +204,8 @@ DEPENDENCIES
   pry-rails (= 0.3.4)
   quiet_assets (= 1.1.0)
   rails (= 4.2.4)
-  rails_12factor
-  ransack
+  rails_12factor (= 0.0.3)
+  ransack (= 1.7.0)
   sass-rails (= 5.0.4)
   sdoc (= 0.4.1)
   spring (= 1.4.0)

@@ -18,5 +18,4 @@ class CommentsController < ApplicationController
   def secure_params
     params.require(:comment).permit(:body)
   end
-
 end

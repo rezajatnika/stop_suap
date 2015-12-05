@@ -9,3 +9,8 @@
 #
 # two: {}
 #  column: value
+
+bandung:
+  province: westjava
+  city: bandung
+  story: first

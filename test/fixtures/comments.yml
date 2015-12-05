@@ -2,8 +2,8 @@
 
 one:
   body: MyText
-  story_id: 
+  story: first
 
 two:
   body: MyText
-  story_id: 
+  story: first

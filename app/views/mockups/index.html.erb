@@ -36,8 +36,8 @@
             <div class="columns small-6 text-center">
               <h6 data-no-turbolink><%= link_to truncate(story.title), story_path(story) %> </h6>
               <div class="story-index-posted">
-                <div>Diposting pada <%= story.created_at.strftime('%e %B, %Y') %></div>
-                <div>dari <%= story.location.city.name %></div>
+                <div><%= story.created_at.strftime('%e %B, %Y') %></div>
+                <div><%= story.location.city.name %></div>
               </div>
             </div>
             <div class="columns small-6 border-left text-center">
@@ -46,26 +46,6 @@
             </div>
           </div>
         <% end %>
-        <!-- <div class="row">
-          <div class="columns small-6 text-center">
-            <h5>asdasdasd asda</h5>
-            <p class="subheader">asd asdhgajsdg asdads</p>
-          </div>
-          <div class="columns small-6 border-left text-center">
-            <h4>Rp. 123412</h4>
-            <p class="subheader">aksdg askdasd</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="columns small-6 text-center">
-            <h5>asdasdasd asda</h5>
-            <p class="subheader">asd asdhgajsdg asdads</p>
-          </div>
-          <div class="columns small-6 border-left text-center">
-            <h4>Rp. 123412</h4>
-            <p class="subheader">aksdg askdasd</p>
-          </div>
-        </div> -->
         <!-- end repeating -->
       </div>
       <div class="columns medium-6 small-12" data-no-turbolink>
@@ -77,7 +57,6 @@
             <%= number_to_currency(@total_amount, unit: 'Rp ', precision: 0) %>
           </div>
         </div>
-        <%= link_to("Detail", statistik_path , class: "button-form small small-3 float-center") %>
         <!-- <a class="button-form medium small-3 float-center">Learn More</a> -->
       </div>
     </div>

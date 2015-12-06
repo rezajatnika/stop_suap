@@ -24,8 +24,8 @@ $offcanvas-size: 100%;
         color: #302f2f;
   }
   .columns {
-    padding: 0 3rem;
-    margin-bottom: 2rem;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
     @include breakpoint(xsmall){
       padding: .5rem;
     }
@@ -46,7 +46,7 @@ $offcanvas-size: 100%;
 .pagination {
   text-align: center;
   .current {
-    background: #000;
+    background: #B80f0f;
   }
   a{
     display: inline-block;

@@ -3,19 +3,18 @@
     <div class="columns medium-9 small-12 border-right-double">
       <h4 data-no-turbolink><%= link_to story.title, story %></h4>
       <small>Diposting pada <span class="story-index-ammount"><%= story.created_at.strftime('%e %B, %Y') %> </span></small>
-      <p><%= truncate(story.content, length: 160) %></p>
-      <%= link_to " lanjutkan ", story %>
-      <div class="float-right comment-count"> <%= story.comments.count %> Komen </div>
+      <p><%= truncate(story.content, length: 250) %></p>
+      <div class="float-right comment-count"> <%= story.comments.count %> Komentar </div>
     </div>
 
-    <div class="columns medium-3 small-12 text-center">
-      <p class="subheader"><%= story.category.name %></p>
+    <div class="columns medium-3 small-12 text-center story-index-right">
+      <div class="subheader"><%= story.category.name %></div>
       <h3 class = "story-index-ammount" <%= "id = notpaid" if story.notpaid? %>><%= number_to_currency(story.amount, unit: 'Rp. ', precision: 0) %></h3>
-      <p class="subheader">
+      <div class="subheader">
         <%= story.story_city %>
         </br> 
         <%= story.story_province %>
-      </p>
+      </div>
     </div>
   </div>
 </div>

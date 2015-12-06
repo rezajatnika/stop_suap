@@ -7,19 +7,27 @@
         <%= @story.content %>
       </div>
     </div>
-    <div class="columns medium-3 float-left text-center">
-      <h5 class="subheader"><%= @story.category.name %></h5>
+    <div class="columns medium-3 float-left text-center story-detail-right">
+      <p class="subheader"><%= @story.category.name %></p>
       <h3 class = "story-index-ammount" <%= "id = notpaid" if @story.notpaid? %> ><%= number_to_currency(@story.amount, unit: 'Rp ', precision: 0) %></h3>
-      <p class="subheader"><%= "#{@story.story_province}, #{@story.story_city}" %></p>
+      <p class="subheader">
+        <%= @story.story_city %>
+        </br> 
+        <%= @story.story_province %>
+      </p>
       <%= social_share_button_tag(@story.title, popup: true) %>
     </div>
   </div>
   <div class="row">
     <div class="columns medium-8 medium-offset-2">
       <div class="comments">
-        <h4>Komentar</h4>
         <% if current_user %>
+          <h4>Komentar</h4>
           <%= render 'comment_form' %>
+        <% else %>
+          <% unless !@story.comments.present? %>
+            <h4>Komentar</h4>
+          <% end %>  
         <% end %>
       </div>
 

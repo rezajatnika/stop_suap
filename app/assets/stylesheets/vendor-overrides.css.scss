@@ -21,6 +21,7 @@ $offcanvas-size: 100%;
 .headline {
   h3{
     text-align: center;
+        color: #302f2f;
   }
   .columns {
     padding: 0 3rem;
@@ -131,4 +132,7 @@ $offcanvas-size: 100%;
 }
 .off-canvas.position-left{
   left: -($offcanvas-size);
+}
+.subheader{
+  color: #8a8a8a !important
 }

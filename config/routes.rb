@@ -37,6 +37,7 @@ Rails.application.routes.draw do
 
   # Mockups
   get 'mockups/index'
+  get 'statistik' => 'mockups#statistic'
   get 'mockups/posts'
   get 'mockups/login'
   get 'mockups/signup'

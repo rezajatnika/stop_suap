@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="columns medium-4 medium-offset-4">
+    <div class="login">
+      <h3>Ganti Password</h3>
+      <%= form_for @user, url: password_reset_path, method: :put do |f| %>
+        <div class="form-field">
+          <%= f.password_field :password, placeholder: 'Password', autofocus: true %>
+        </div>
+
+        <div class="form-field">
+          <%= f.password_field :password_confirmation, placeholder: 'Konfirmasi' %>
+        </div>
+
+        <%= f.submit 'Change password!', class: 'button-form large float-center' %>
+      <% end %>
+  </div>
+</div>

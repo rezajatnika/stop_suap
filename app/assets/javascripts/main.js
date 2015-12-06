@@ -2,10 +2,10 @@
 $(document).foundation();
 
 // Close alert message
-var alertClose = $('a.alert-close');
+var alertClose = $('button.close-button');
 alertClose.click(function(event) {
   event.preventDefault();
-  $('.alert-flash').hide();
+  $('.flash-message').hide();
 });
 
 // Pick a date

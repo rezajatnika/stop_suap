@@ -8,7 +8,7 @@ class UserSessionsController < ApplicationController
     if @user_session.save
       redirect_to root_path, success: 'Logged in!'
     else
-      flash.now[:warning] = '<strong>Oops...</strong> Invalid email or password.'
+      flash.now[:alert] = '<strong>Oops...</strong> Invalid email or password.'
       render :new
     end
   end

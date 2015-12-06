@@ -20,13 +20,13 @@ $('#story_event_date').pickadate({
 $(document).trigger('refresh_autonumeric')
 
 // Posting Comment AJAX
-$(document).on('ready page:load', function() {
-  return $('#new_comment').on('ajax:success', function(e, data, status, xhr) {
-    return $('#new_comment #comment_body').val('');
-  }).on('ajax:error', function(e, xhr, status, error) {
-    return $('#new_comment').append('<p>ERROR</p>');
-  });
-});
+// $(document).on('ready page:load', function() {
+//   return $('#new_comment').on('ajax:success', function(e, data, status, xhr) {
+//     return $('#new_comment #comment_body').val('');
+//   }).on('ajax:error', function(e, xhr, status, error) {
+//     return $('#new_comment').append('<p>ERROR</p>');
+//   });
+// });
 
 $('#story_category_id').select2();
 $('#story_location_attributes_province_id').select2();

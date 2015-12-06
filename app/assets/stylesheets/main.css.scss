@@ -25,7 +25,7 @@ BREAKPOINTS
 }
 // Global style
 body{
-  font-family: 100% $font-stack !important;
+  font-family: $font-stack !important;
 }
 h1, h2, h3, h4, h5, h6{
   font-family: $font-stack;
@@ -52,27 +52,27 @@ a {
 }
 
 .border-right-double {
-  border-right: 4px double #000;
+  border-right: 1px solid #8E8E8E;
 }
 
 .border-left-double {
-  border-left: 4px double #000;
+  border-left: 2px solid #8E8E8E;
 }
 
 .border-bottom-double {
-  border-bottom: 4px double #000;
+  border-bottom: .3rem solid #B80f0f;
 }
 
 .border-top-double {
-  border-top: 4px double #000;
+  border-top: 2px solid #8E8E8E;
 }
 
 .border-right {
-  border-right: 1px solid #000;
+  border-right: 1px solid #8E8E8E;
 }
 
 .border-left {
-  border-left: 1px solid #000;
+  border-left: 1px solid #8E8E8E;
 }
 .border-left-grey {
   border-left: 1px solid #8E8E8E;
@@ -85,7 +85,7 @@ a {
 
 .top-bar {
   background: #302f2f;
-  height: 6rem;
+  height: 5rem;
   position: static;
   padding: 0;
   @include breakpoint(xsmall){
@@ -97,7 +97,7 @@ a {
   }
   .top-bar-right {
     height: 100%;
-    padding: 2.5rem;
+    padding: 2.09rem;
     @include breakpoint(xsmall) {
       display: inline-block;
       float: right;
@@ -124,7 +124,7 @@ a {
   .top-bar-left {
     height: 100%;
     width: 260px;
-    padding: 1.5rem;
+    padding: 1.3rem;
     background: #B80f0f;
     @include breakpoint(xsmall) {
       display: inline-block;
@@ -136,7 +136,7 @@ a {
   }
   .menu-text {
     padding: 0;
-    margin-left: 1rem;
+    margin-left: 2rem;
     @include breakpoint(xsmall){
       margin-left: 0;
       height: 100%;
@@ -237,11 +237,11 @@ button.off-canvas-toggle{
 .masthead-title {
   margin-top: .5rem;
   display: inline-block;
-  font-size: 1.1rem
+  font-size: 1.2rem
 }
 
 #container-map {
-  height: calc( 100vh - 10rem);
+  height: calc( 100vh - 9rem);
   padding: 2rem 0;
   @include breakpoint(xsmall){
     display: none;
@@ -255,15 +255,26 @@ button.off-canvas-toggle{
 // End Masthead
 
 // Site Content
+
+.content-header{
+  text-align: center;
+  color: #3b3b3b;
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  h3, subheader{
+    margin: 0;
+  }
+}
 .story-index-title{
   font-size: .9rem;
 }
 .story-index-posted{
-  font-size: .5rem;
+  font-size: .55rem;
   color: #8a8a8a;
 }
 .story-index-ammount{
   color: #B80f0f;
+  font-weight: bold
 }
 .statistical-amount{
   color: #8a8a8a;
@@ -272,6 +283,8 @@ button.off-canvas-toggle{
   .statistical-amount-sum{
     font-size: 2.5rem;
     color: #B80f0f;
+    font-weight: bold;
+    font-family: Merriweather;
   }
 }
 #notpaid{
@@ -286,6 +299,9 @@ button.off-canvas-toggle{
   }
   .process-title{
     color: #B80f0f;
+  }
+  .process-desc{
+    color:#5e5e5e;
   }
   img{
     width: 10rem;
@@ -323,7 +339,8 @@ span.stripe{
     small{
       margin-bottom: 1.3rem;
       text-align: left;
-      color: #302f2f;
+      color:#8a8a8a;
+      font-size: .7rem;
     }
     .comment-label{
       color: #5e5e5e;
@@ -338,19 +355,35 @@ span.stripe{
     padding: 1rem 0;
     color: #3b3b3b;
   }
+  small{
+    font-style: italic; 
+    color: #8a8a8a;
+  }
 }
 .story {
   margin: 3rem 0;
-  h4{
-    a{
-      color: #3b3b3b;
-    }
-  }
+  
   p{
     color: #5e5e5e;
+    font-size: .9rem;
   }
   .comment-count{
     color: #525252;
+    font-size: .7rem;
+  }
+  small{
+    font-size: .7rem;
+  }
+  .border-right-double{
+    h4{
+      a{
+        color: #3b3b3b;
+        font-size: 1.5625rem;
+      }
+    }
+    a{
+      font-size: .7rem;
+    }
   }
 }
 
@@ -371,20 +404,25 @@ span.stripe{
   h3.story-index-ammount{
     color: #B80f0f;
   }
+  .story-detail-right{
+    margin-top: 3rem;
+    padding: 0 4rem;
+    p.subheader{
+      font-size: .8rem;
+    }
+  }
 }
 
 .index-control {
-  width: 60%;
+  width: 80%;
   margin: 3rem auto;
-
   input {}
-
   li {
       margin-left: 3rem;
   }
 }
 
-.index-report {
+.index-report{
   width: 80%;
   margin: 0 auto;
 }
@@ -401,7 +439,13 @@ span.stripe{
 // End Site Content
 
 // Form
-
+.create-story{
+  margin-bottom: 3rem;
+  .last-section{    
+    border-bottom: 2px solid #8E8E8E;
+    padding-bottom: 2rem;
+  }
+}
 .form-field {
   margin-top: 0px;
   margin-bottom: 15px;
@@ -411,6 +455,7 @@ span.stripe{
   border: 1px solid #B80f0f;
   padding: 0.5rem 1rem;
   color: #B80f0f;
+  text-align: center;
 }
 
 .login {
@@ -420,7 +465,6 @@ span.stripe{
     text-align: center;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
-    border-bottom: 4px double #000;
     color: #3b3b3b;
   }
   .button-form{
@@ -432,7 +476,7 @@ span.stripe{
     font-style: italic;
     font-size: 60%;
   }
-  p{
+  p{  
     font-size: .9rem;
     font-style: italic;
     text-align: center;
@@ -466,7 +510,9 @@ span.stripe{
     border-radius: 0;
   }
 }
-
+label{
+  color: #3b3b3b;
+}
 // End Form
 
 // Site Footer
@@ -478,6 +524,7 @@ span.stripe{
   background: #302f2f;
   color: #fff;
   height: 4.5rem;
+  margin-top: 3rem;
 
   a:hover {
     color: #fff;

@@ -1,10 +1,10 @@
 <div class="row">
   <div class="columns medium-4 medium-offset-4">
     <div class="login">
-      <h3>Join Stop Suap today!</h3>
+      <h3>Daftar Sekarang !</h3>
       <%= form_for @user, url: signup_path do |f| %>
         <div class="form-field">
-          <%= f.text_field :name, class: 'input--large', placeholder: 'Name', autofocus: true %>
+          <%= f.text_field :name, class: 'input--large', placeholder: 'Nama', autofocus: true %>
         </div>
         <div class="form-field">
           <%= f.text_field :email, class: 'input--large', placeholder: 'Email', autofocus: true %>
@@ -15,10 +15,10 @@
         </div>
 
         <div class="form-field">
-          <%= f.password_field :password_confirmation, class: 'input--large', placeholder: 'Password confirmation' %>
+          <%= f.password_field :password_confirmation, class: 'input--large', placeholder: 'Konfirmasi Password' %>
         </div>
 
-        <%= f.submit 'Sign Up', class: 'button-form large float-center' %>
+        <%= f.submit 'Daftar', class: 'button-form large float-center' %>
       <% end %>
       <small>
         **By signing up, you agree to the Terms of Service and Privacy Policy,

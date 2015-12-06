@@ -3,7 +3,7 @@
   <div class="masthead">
     <!-- <div class="container"> -->
       <h4 class="masthead-title kilo"><b>Jadilah bagian dari perubahan !</b></h4>
-      <a class="large button float-right" href="#">Laporkan !</a>
+      <%= link_to "Laporkan!", new_story_path, class: 'large button float-right' %>
     <!-- </div> -->
   </div>
   <div class="process">
@@ -28,13 +28,13 @@
   <div class="container headline">
     <div class="row">
       <div class="columns medium-6 small-12">
-        <h3>Latest Stories</h3>
+        <h3>Laporan Terbaru</h3>
         <span class="stripe"></span>
         <!-- start repeating -->
         <% @latest_stories.each do |story| %>
           <div class="row">
             <div class="columns small-6 text-center">
-              <h6><%= truncate(story.title) %> <small><%= link_to "read more", story_path(story) %></small></h6>
+              <h6 data-no-turbolink><%= link_to truncate(story.title), story_path(story) %> </h6>
               <div class="story-index-posted">
                 <div>Diposting pada <%= story.created_at.strftime('%e %B, %Y') %></div>
                 <div>dari <%= story.location.city.name %></div>
@@ -68,8 +68,8 @@
         </div> -->
         <!-- end repeating -->
       </div>
-      <div class="columns medium-6 small-12">
-        <h3>Statistics</h3>
+      <div class="columns medium-6 small-12" data-no-turbolink>
+        <h3>Statistik</h3>
         <span class="stripe"></span>
         <div id="container-chart" style="width:100%; height:400px;"></div>
         <div class="statistical-amount">Total Nilai Suap
@@ -77,7 +77,8 @@
             <%= number_to_currency(@total_amount, unit: 'Rp ', precision: 0) %>
           </div>
         </div>
-        <a class="button-form medium small-3 float-center">Learn More</a>
+        <%= link_to("Detail", statistik_path , class: "button-form small small-3 float-center") %>
+        <!-- <a class="button-form medium small-3 float-center">Learn More</a> -->
       </div>
     </div>
   </div>

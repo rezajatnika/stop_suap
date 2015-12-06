@@ -1,0 +1,5 @@
+id:
+  will_paginate:
+    page_gap: "&hellip;"
+    previous_label: "sebelumnya"
+    next_label: "berikutnya"

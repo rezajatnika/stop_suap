@@ -17,18 +17,18 @@
 
       <div class="form-field">
         <%= f.check_box :paid, {}, 'paid', 'notpaid' %>
-        <%= f.label :paid, 'Did you paid bribe?' %>
+        <%= f.label :paid, 'Anda bayar?' %>
       </div>
 
       <div class="form-field">
-        <%= f.label :amount, "How much you've paid?" %>
+        <%= f.label :amount, "Jumlah yang anda bayarkan?" %>
         <%= f.text_field :amount, data: { autonumeric: { aSign: 'Rp ', mDec: 0 } } %>
       </div>
     </section>
 
-    <section>
+    <section <%= "class= last-section" if current_user %>>
       <div class="form-field">
-        <%= f.label :event_date, 'When it happens?' %>
+        <%= f.label :event_date, 'Waktu kejadian' %>
         <%= f.text_field :event_date,
           value: (@story.event_date.nil? ? Date.today.strftime('%e %B, %Y') : @story.event_date.strftime('%e %B, %Y')) %>
       </div>
@@ -36,12 +36,12 @@
       <%= f.fields_for :location, @story.location || @story.build_location do |field| %>
         <div class="row">
           <div class="columns small-6 form-field">
-            <%= field.label :province_id %>
+            <%= field.label :province_id, 'Propinsi' %>
             <%= field.collection_select :province_id, Province.all, :id, :name, prompt: true %>
           </div>
 
           <div class="columns small-6 form-field">
-            <%= field.label :city_id %>
+            <%= field.label :city_id, 'Kota' %>
             <%= field.collection_select :city_id, @cities || City.all, :id, :name, prompt: 'Please select' %>
           </div>
         </div>
@@ -49,17 +49,20 @@
     </section>
 
     <% unless current_user %>
-      <section>
-      <div class="form-field">
-        <%= f.label :name, 'Your name' %>
-        <%= f.text_field :name %>
-      </div>
+      <section class= "last-section" >
+        <div class="form-field">
+          <%= f.label :name, 'Nama anda' %>
+          <%= f.text_field :name %>
+        </div>
 
         <div class="form-field">
-          <%= f.label :email, 'Your email address' %>
+          <%= f.label :email, 'Alamat surel anda' %>
           <%= f.text_field :email %>
         </div>
       </section>
     <% end %>
-    <%= f.submit 'Submit', class: 'button-form' %>
+    <section style= "margin-bottom: 2rem;">
+      <small>**Validasi laporan akan dikirimkan ke email anda setelah melakukan submit laporan ini. Silahkan cek email anda dan click link yang telah kami berikan untuk proses validasi.</small>
+    </section>
+    <%= f.submit 'Simpan', class: 'button-form' %>
 <% end %>

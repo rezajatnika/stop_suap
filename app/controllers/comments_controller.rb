@@ -1,14 +1,12 @@
 class CommentsController < ApplicationController
   def create
     @story = Story.find(params[:story_id])
-    @comment = @story.comments.build(secure_params)
+    @comment = Comment.new(secure_params)
+    @comment.story = @story
     @comment.user_id = current_user.id
     respond_to do |format|
       if @comment.save
         format.js
-        format.json { render json: @comment, status: :created}
-      else
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
   end

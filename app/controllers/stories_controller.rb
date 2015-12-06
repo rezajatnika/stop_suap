@@ -5,7 +5,7 @@ class StoriesController < ApplicationController
   end
 
   def show
-    @story    = Story.find(params[:id])
+    @story    = Story.find_by_slug(params[:id])
     @comments = @story.comments
   end
 

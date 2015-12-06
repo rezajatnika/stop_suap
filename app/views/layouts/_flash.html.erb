@@ -1,8 +1,11 @@
-<% flash.each do |key, message| %>
-  <div container class="alert-flash">
-    <div data-alert class="alert-box <%= key %>">
+<div class="row flash-message">
+  <br>
+  <% flash.each do |key, message| %>
+    <div class="callout small <%= key %>" data-closable>
       <p><%= message.html_safe %></p>
-      <a class="close" href="#">&times;</a>
+      <button class="close-button" type="button" aria-label="Dismiss <%= key %>">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

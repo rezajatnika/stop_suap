@@ -26,7 +26,7 @@ User.create(
 )
 
 # Random users
-500.times do
+10.times do
   User.create(
     name: Faker::Name.name,
     email: Faker::Internet.free_email,
@@ -45,7 +45,7 @@ Category.create(
   ]
 )
 
-2561.times do |user|
+250.times do |user|
   province = Province.order('RANDOM()').first
   city = province.cities.order('RANDOM()').first
   user = User.order('RANDOM()').first

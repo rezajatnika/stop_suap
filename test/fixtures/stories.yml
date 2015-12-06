@@ -19,3 +19,4 @@ first:
   event_date: <%= Date.today %>
   name: Jane Doe
   email: janedoe@email.net
+  slug: no-title

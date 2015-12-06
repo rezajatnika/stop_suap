@@ -17,8 +17,8 @@
       </div>
       <div class="off-canvas-content" data-off-canvas-content>
         <div class="wrapper">
-          <%= render 'layouts/flash' if flash.any? %>
           <main container class="site-content">
+            <%= render 'layouts/flash' if flash.any? %>
             <%= yield %>
           </main>
           <%= render 'layouts/footer' %>

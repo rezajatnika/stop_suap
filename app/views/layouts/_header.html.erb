@@ -14,7 +14,7 @@
       <li><%= link_to 'Laporan', stories_path, class: "#{active_class(stories_path)}" %></li>
       <li><%= link_to 'Laporkan !', new_story_path, class: "#{active_class(new_story_path)}", id: 'lapor' %></li>
       <% if current_user  %>
-        <li class="border-left-grey"><%= link_to 'Settings', change_password_path  %></li>
+        <li class="border-left-grey"><%= link_to 'Pengaturan', change_password_path  %></li>
         <li class="border-left-grey"><%= link_to 'Keluar', logout_path, method: :delete %></li>
       <% else %>
         <li class="border-left-grey"><%= link_to 'Masuk', login_path, class: "#{active_class(login_path)}" %></li>

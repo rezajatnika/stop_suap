@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20151203154402) do
     t.string   "title"
     t.text     "content"
     t.integer  "paid",        default: 0
-    t.integer  "amount"
+    t.integer  "amount",      default: 0
     t.datetime "event_date"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false

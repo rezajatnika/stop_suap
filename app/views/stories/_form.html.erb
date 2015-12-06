@@ -17,11 +17,11 @@
 
       <div class="form-field">
         <%= f.check_box :paid, {}, 'paid', 'notpaid' %>
-        <%= f.label :paid, 'Anda bayar?' %>
+        <%= f.label :paid, 'Memberi suap' %>
       </div>
 
       <div class="form-field">
-        <%= f.label :amount, "Jumlah yang anda bayarkan?" %>
+        <%= f.label :amount, 'Jumlah yang anda berikan?' %>
         <%= f.text_field :amount, data: { autonumeric: { aSign: 'Rp ', mDec: 0 } } %>
       </div>
     </section>
@@ -42,7 +42,7 @@
 
           <div class="columns small-6 form-field">
             <%= field.label :city_id, 'Kota' %>
-            <%= field.collection_select :city_id, @cities || City.all, :id, :name, prompt: 'Please select' %>
+            <%= field.collection_select :city_id, @cities || City.all, :id, :name, prompt: true %>
           </div>
         </div>
       <% end %>

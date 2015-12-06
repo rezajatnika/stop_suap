@@ -19,15 +19,17 @@ $('#story_event_date').pickadate({
 // Autonumeric
 $(document).trigger('refresh_autonumeric')
 
-// Posting Comment AJAX
-// $(document).on('ready page:load', function() {
-//   return $('#new_comment').on('ajax:success', function(e, data, status, xhr) {
-//     return $('#new_comment #comment_body').val('');
-//   }).on('ajax:error', function(e, xhr, status, error) {
-//     return $('#new_comment').append('<p>ERROR</p>');
-//   });
-// });
-
+// Select2
 $('#story_category_id').select2();
 $('#story_location_attributes_province_id').select2();
 $('#story_location_attributes_city_id').select2();
+
+$(document).ready(function() {
+  $('#story_location_attributes_province_id').change(function() {
+    $.ajax({
+       url: '/update_cities',
+       data: { province_id: $('#story_location_attributes_province_id').val() },
+       dataType: 'script'
+     });
+  });
+});

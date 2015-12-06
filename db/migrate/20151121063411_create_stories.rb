@@ -6,7 +6,7 @@ class CreateStories < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.integer :paid, default: 0
-      t.integer :amount
+      t.integer :amount, default: 0
       t.datetime :event_date
 
       t.timestamps null: false

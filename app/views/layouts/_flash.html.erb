@@ -1,7 +1,7 @@
 <div class="row flash-message">
   <br>
   <% flash.each do |key, message| %>
-    <div class="callout <%= key %>" data-closable>
+    <div class="callout small <%= key %>" data-closable>
       <p><%= message.html_safe %></p>
       <button class="close-button" type="button" aria-label="Dismiss <%= key %>">
         <span aria-hidden="true">&times;</span>

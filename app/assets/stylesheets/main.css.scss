@@ -364,7 +364,7 @@ span.stripe{
     color: #3b3b3b;
   }
   small{
-    font-style: italic; 
+    font-style: italic;
     color: #8a8a8a;
   }
 }
@@ -454,7 +454,7 @@ span.stripe{
 // Form
 .create-story{
   margin-bottom: 3rem;
-  .last-section{    
+  .last-section{
     border-bottom: 2px solid #8E8E8E;
     padding-bottom: 2rem;
   }
@@ -489,7 +489,7 @@ span.stripe{
     font-style: italic;
     font-size: 60%;
   }
-  p{  
+  p{
     font-size: .9rem;
     font-style: italic;
     text-align: center;
@@ -523,8 +523,17 @@ span.stripe{
     border-radius: 0;
   }
 }
-label{
+label {
   color: #3b3b3b;
+}
+
+.field_with_errors {
+  input, textarea {
+    border-color: #B80f0f;
+  }
+  label {
+    color: #B80f0f;
+  }
 }
 // End Form
 

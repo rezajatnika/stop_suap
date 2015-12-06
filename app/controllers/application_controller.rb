@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   # Helper method
   helper_method(:current_user_session, :current_user)
+  add_flash_types(:success)
 
   private
 

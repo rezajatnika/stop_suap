@@ -10,13 +10,13 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
+  <%= render 'layouts/flash' if flash.any? %>
   <div class="off-canvas-wrapper">
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
       <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
         <%= render 'layouts/offcanvas' %>
       </div>
       <div class="off-canvas-content" data-off-canvas-content>
-        <%= render 'layouts/flash' %>
         <%= yield %>
         <%= render 'layouts/footer' %>
       </div>

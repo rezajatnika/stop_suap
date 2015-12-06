@@ -28,6 +28,9 @@ Rails.application.routes.draw do
     post 'change_password', to: 'settings/passwords#create'
   end
 
+  # Password reset
+  resources :password_resets, only: [:new, :create, :edit, :update]
+
   # Map data from Api
   namespace :api do
     namespace :v1 do
@@ -36,11 +39,4 @@ Rails.application.routes.draw do
       get 'province_data', to: 'locations#province_data'
     end
   end
-
-  # Mockups
-  get 'mockups/index'
-  get 'statistik' => 'mockups#statistic'
-  get 'mockups/posts'
-  get 'mockups/login'
-  get 'mockups/signup'
 end

@@ -26,10 +26,13 @@ class User < ActiveRecord::Base
         password: new_password,
         password_confirmation: confirmation
       )
-      logger.info("Password for #{self.name} has been changed.")
     else
-      logger.warn("Password for #{self.name} unchanged.")
       return false
     end
+  end
+
+  def deliver_password_reset_instructions!
+    reset_perishable_token!
+    PasswordResetMailer.reset_email(self).deliver_later
   end
 end

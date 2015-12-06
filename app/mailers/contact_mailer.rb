@@ -1,6 +1,5 @@
 class ContactMailer < ApplicationMailer
-
-  default to: "admin@stopsuap.com"
+  default to: 'admin@rakarsa.com'
 
   def contact(contact)
     @contact = contact

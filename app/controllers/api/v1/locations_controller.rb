@@ -21,54 +21,44 @@ class Api::V1::LocationsController < ApplicationController
 
   # FIXME: Move to model or helper
   def get_map_data
-    @provinces = Province.all
-    @locations = Location.includes(:province)
-    @provinces.map do |province|
-      {
-        'hc-key': province.code,
-        'value': @locations.where(province_id: province.id).count
-      }
-    end.unshift({ 'hc-key': 'id-3700', 'value': 0 })
+    Location.joins(:province).group(:code).count.map do |key, val|
+      { 'hc-key': key, 'value': val }
+    end
   end
 
   # FIXME: Move to model or helper
   def get_pie_data
-    @categories = Category.includes(:stories).all
-    @categories.map do |category|
+    count = Story.count
+    Story.group(:category).count.map do |key, value|
       {
-        'name': category.name,
-        'y': Story.count.zero? ?
-          0 : category.stories.count.to_f / Story.count * 100,
-        'drilldown': category.name
+        'name': key.name,
+        'drilldown': key.name,
+        'y': count.zero? ? 0 : value.to_f / count * 100
       }
     end
   end
 
   # FIXME: Move to model or helper
   def get_province_data
-    @categories = Category.includes(:stories).all
-    @provinces = Province.all
+    total = Story.group(:category).count.each_with_object({}) do |(k, v), o|
+       o[k.id] = v
+    end
 
-    @categories.map do |category|
+    Category.select(:id, :name).map do |cat|
       {
-        'name': category.name,
-        'id': category.name,
-        'data': @provinces.map do |province|
+        'name': cat.name,
+        'id': cat.name,
+        'data': location_join(cat.id).count.map do |key, val|
           [
-            province.name,
-            category.stories.count.zero? ?
-              0 : story_count(province, category) /
-                  category.stories.count.to_f * 100
+            key.name,
+            total.fetch(cat.id).zero? ? 0 : val.to_f / total.fetch(cat.id) * 100
           ]
         end
       }
     end
   end
 
-  def story_count(province, category)
-    @stories = Story.includes(:location).where(category_id: category.id)
-    @stories.joins(
-      'LEFT OUTER JOIN locations ON locations.story_id = stories.id'
-    ).where('locations.province_id = ?', province.id).count
+  def location_join(id)
+    Location.joins(:story).group(:province).where('stories.category_id = ?', id)
   end
 end

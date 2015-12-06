@@ -1,15 +1,6 @@
 // foundation init
 $(document).foundation();
 
-//jquery step wizard
-// $("#report-wizard").steps({
-//     headerTag: "h3",
-//     bodyTag: "section",
-//     transitionEffect: "slideLeft",
-//     titleTemplate: '<span class="number">#index#</span>',
-//     autoFocus: true
-// });
-
 // Close alert message
 var alertClose = $('a.alert-close');
 alertClose.click(function(event) {
@@ -40,11 +31,3 @@ $(document).trigger('refresh_autonumeric')
 $('#story_category_id').select2();
 $('#story_location_attributes_province_id').select2();
 $('#story_location_attributes_city_id').select2();
-
-// Filter cities by province
-// $(function() {
-//   filterCityList();
-// });
-
-
-

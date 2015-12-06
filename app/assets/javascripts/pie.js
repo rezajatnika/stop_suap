@@ -27,40 +27,46 @@ var drillData = (function() {
 }());
 
 $(function () {
-    // Create the chart
-    $('#container-chart').highcharts({
-      credits: {
-        enabled: false
-      },
-        chart: {
-            type: 'pie'
-        },
-        title: {
-            text: 'Browser market shares. January, 2015 to May, 2015'
-        },
-        subtitle: {
-            text: 'Click the slices to view versions. Source: netmarketshare.com.'
-        },
-        plotOptions: {
-            series: {
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.name}: {point.y:.1f}%'
-                }
-            }
-        },
+  // Create the chart
+  $('#container-chart').highcharts({
+    credits: {
+      enabled: false
+    },
 
-        tooltip: {
-            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-        },
-        series: [{
-            name: 'Brands',
-            colorByPoint: true,
-            data: pieData
-        }],
-        drilldown: {
-            series: drillData
+    chart: {
+      type: 'pie'
+    },
+
+    title: {
+      text: 'Prosentase persebaran laporan tindakan suap'
+    },
+
+    subtitle: {
+      text: 'Klik tiap kategori untuk data lebih detail'
+    },
+
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: '{point.name}: {point.y:.1f}%'
         }
-    });
+      }
+    },
+
+    tooltip: {
+      headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+      pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> dari jumlah total<br/>'
+    },
+
+    series: [{
+      name: 'Kategori',
+      colorByPoint: true,
+      data: pieData
+    }],
+
+    drilldown: {
+      series: drillData
+    }
+  });
 });

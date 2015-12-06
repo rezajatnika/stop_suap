@@ -1,15 +1,15 @@
-var json = (function() {
-  var json = null;
+var mapData = (function() {
+  var mapData = null;
   $.ajax({
     'async': false,
     'global': false,
     'url': '/api/v1/map_data.json',
     'dataType': 'json',
     'success': function(data) {
-      json = data;
+      mapData = data;
     }
   });
-  return json;
+  return mapData;
 }());
 
 $(function() {
@@ -44,21 +44,25 @@ $(function() {
     },
 
     colorAxis: {
-      min: 0
+      min: 0,
+      type: 'linear',
+      minColor: '#d3d3d3',
+      maxColor: '#000000'
     },
 
     series : [{
-      data : json,
+      data : mapData,
+      nullColor: 'grey',
       mapData: Highcharts.maps['countries/id/id-all'],
       joinBy: 'hc-key',
-      name: 'Laporan',
+      name: 'Jumlah Laporan',
       states: {
         hover: {
-            color: '#BADA55'
+            color: '#b80f0f'
         }
       },
       dataLabels: {
-        enabled: true,
+        enabled: false,
         format: '{point.name}'
       }
     }]

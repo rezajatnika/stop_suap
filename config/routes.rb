@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
 
+  get 'update_cities', to: 'stories#update_cities'
+
   resources :contacts, only: [:new, :create]
 
   # Account settings

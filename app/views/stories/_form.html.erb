@@ -42,8 +42,7 @@
 
           <div class="columns small-6 form-field">
             <%= field.label :city_id %>
-            <%= field.grouped_collection_select :city_id, Province.includes(:cities).all.order(:name),
-              :cities, :name, :id, :name, prompt: true %>
+            <%= field.collection_select :city_id, @cities || City.all, :id, :name, prompt: 'Please select' %>
           </div>
         </div>
       <% end %>

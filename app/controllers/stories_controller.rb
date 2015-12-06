@@ -1,15 +1,12 @@
 class StoriesController < ApplicationController
   def new
-    @story = current_user ? current_user.stories.new : Story.new
+    @story  = current_user ? current_user.stories.new : Story.new
+    @cities = City.all
   end
 
   def show
     @story    = Story.find(params[:id])
     @comments = @story.comments
-  end
-
-  def edit
-    @story = Story.find(params[:id])
   end
 
   def index
@@ -30,6 +27,12 @@ class StoriesController < ApplicationController
       flash.now[:warning] = 'Please review your report again.'
       render :new
     end
+  end
+
+  def update_cities
+    province = Province.find(params[:province_id])
+    @cities  = province.cities.map { |city| [city.name, city.id] }
+      .insert(0, 'Silahkan pilih')
   end
 
   private

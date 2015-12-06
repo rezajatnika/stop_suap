@@ -136,7 +136,7 @@ a {
   }
   .menu-text {
     padding: 0;
-    margin-left: 2rem;
+    margin-left: 1rem;
     @include breakpoint(xsmall){
       margin-left: 0;
       height: 100%;
@@ -235,9 +235,9 @@ button.off-canvas-toggle{
 }
 
 .masthead-title {
-  margin-top: .2rem;
+  margin-top: .5rem;
   display: inline-block;
-  font-size: 1.5rem
+  font-size: 1.1rem
 }
 
 #container-map {
@@ -432,7 +432,7 @@ span.stripe{
     font-style: italic;
     font-size: 60%;
   }
-  p{  
+  p{
     font-size: .9rem;
     font-style: italic;
     text-align: center;

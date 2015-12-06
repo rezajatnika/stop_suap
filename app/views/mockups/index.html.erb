@@ -1,10 +1,10 @@
 <div class="site-content">
   <div id="container-map"></div>
   <div class="masthead">
-    <div class="container">
+    <!-- <div class="container"> -->
       <h4 class="masthead-title kilo"><b>Jadilah bagian dari perubahan !</b></h4>
       <a class="large button float-right" href="#">Laporkan !</a>
-    </div>
+    <!-- </div> -->
   </div>
   <div class="process">
     <div class="row">
@@ -31,7 +31,22 @@
         <h3>Latest Stories</h3>
         <span class="stripe"></span>
         <!-- start repeating -->
-        <div class="row">
+        <% @latest_stories.each do |story| %>
+          <div class="row">
+            <div class="columns small-6 text-center">
+              <h6><%= truncate(story.title) %> <small><%= link_to "read more", story_path(story) %></small></h6>
+              <div class="story-index-posted">
+                <div>Diposting pada <%= story.created_at.strftime('%e %B, %Y') %></div>
+                <div>dari <%= story.location.city.name %></div>
+              </div>
+            </div>
+            <div class="columns small-6 border-left text-center">
+              <h4 class="story-index-ammount" <%= "id = notpaid" if story.notpaid? %> ><%= number_to_currency(story.amount, unit: 'Rp ', precision: 0) %></h4>
+              <p class="subheader"><%= story.category.name %></p>
+            </div>
+          </div>
+        <% end %>
+        <!-- <div class="row">
           <div class="columns small-6 text-center">
             <h5>asdasdasd asda</h5>
             <p class="subheader">asd asdhgajsdg asdads</p>
@@ -50,25 +65,19 @@
             <h4>Rp. 123412</h4>
             <p class="subheader">aksdg askdasd</p>
           </div>
-        </div>
-        <div class="row">
-          <div class="columns small-6 text-center">
-            <h5>asdasdasd asda</h5>
-            <p class="subheader">asd asdhgajsdg asdads</p>
-          </div>
-          <div class="columns small-6 border-left text-center">
-            <h4>Rp. 123412</h4>
-            <p class="subheader">aksdg askdasd</p>
-          </div>
-        </div>
+        </div> -->
         <!-- end repeating -->
       </div>
       <div class="columns medium-6 small-12">
         <h3>Statistics</h3>
         <span class="stripe"></span>
         <div id="container-chart" style="width:100%; height:400px;"></div>
-        </br>
-        <a class="button medium small-3 float-center">Learn More »</a>
+        <div class="statistical-amount">Total Nilai Suap
+          <div class="statistical-amount-sum">
+            <%= number_to_currency(@total_amount, unit: 'Rp ', precision: 0) %>
+          </div>
+        </div>
+        <a class="button-form medium small-3 float-center">Learn More</a>
       </div>
     </div>
   </div>

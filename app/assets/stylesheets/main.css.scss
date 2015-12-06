@@ -77,6 +77,9 @@ a {
 .border-left-grey {
   border-left: 1px solid #8E8E8E;
 }
+.active{
+  color: #fff !important;
+}
 
 // Site Header
 
@@ -120,7 +123,7 @@ a {
   }
   .top-bar-left {
     height: 100%;
-    width: 20%;
+    width: 260px;
     padding: 1.5rem;
     background: #B80f0f;
     @include breakpoint(xsmall) {
@@ -154,7 +157,7 @@ a {
     margin-bottom: 0;
 }
 button.off-canvas-toggle{
-  background:url('toggle.svg') center no-repeat;
+  background:url('/assets/toggle.svg') center no-repeat;
   background-size: contain;
   color: transparent;
   width: 2rem;
@@ -203,11 +206,11 @@ button.off-canvas-toggle{
 .masthead {
   background-color: #B80f0f;
   padding: 1rem;
-  height: 8rem;
+  height: 4rem;
   color: #fff;
   .button{
-    font-size: 2rem;
-    margin: -0.5rem;
+    font-size: 1.5rem;
+    margin: 0;
   }
   @include breakpoint(xsmall){
     position: absolute;
@@ -227,17 +230,19 @@ button.off-canvas-toggle{
 
 @media (min-width: 48em) {
   .masthead {
-      padding: 1rem;
+      padding: .8rem;
   }
 }
 
 .masthead-title {
-  margin-top: 0;
+  margin-top: .2rem;
   display: inline-block;
+  font-size: 1.5rem
 }
 
 #container-map {
-  height: calc( 100vh - 14rem);
+  height: calc( 100vh - 10rem);
+  padding: 2rem 0;
   @include breakpoint(xsmall){
     display: none;
   }
@@ -250,9 +255,31 @@ button.off-canvas-toggle{
 // End Masthead
 
 // Site Content
+.story-index-title{
+  font-size: .9rem;
+}
+.story-index-posted{
+  font-size: .5rem;
+  color: #8a8a8a;
+}
+.story-index-ammount{
+  color: #B80f0f;
+}
+.statistical-amount{
+  color: #8a8a8a;
+  text-align: center;
+  margin-bottom: 1rem;
+  .statistical-amount-sum{
+    font-size: 2.5rem;
+    color: #B80f0f;
+  }
+}
+#notpaid{
+  color: green;
+}
 .process{
   text-align: center;
-  margin: 10rem 5rem;
+  margin: 5rem;
   .columns{
     padding-right: 3rem;
     padding-left: 3rem;
@@ -281,10 +308,27 @@ span.stripe{
 .content_container {
   margin-top: 20px;
   margin-bottom: 20px;
+  color: #5e5e5e;
 }
 
 .comments {
   margin-top: 40px;
+  h4{
+    color: #3b3b3b;
+  }
+}
+#comments{
+  margin-top: 40px;
+  .comment{
+    small{
+      margin-bottom: 1.3rem;
+      text-align: left;
+      color: #302f2f;
+    }
+    .comment-label{
+      color: #5e5e5e;
+    }
+  }
 }
 
 .create-story {
@@ -292,16 +336,29 @@ span.stripe{
     margin: 2rem 0;
     text-align: center;
     padding: 1rem 0;
+    color: #3b3b3b;
   }
 }
 .story {
   margin: 3rem 0;
+  h4{
+    a{
+      color: #3b3b3b;
+    }
+  }
+  p{
+    color: #5e5e5e;
+  }
+  .comment-count{
+    color: #525252;
+  }
 }
 
 .story-detail {
   h3, small {
       text-align: center;
       display: block;
+      color: #3b3b3b;
   }
 
   small {
@@ -310,6 +367,9 @@ span.stripe{
 
   .columns {
       padding-right: 4rem;
+  }
+  h3.story-index-ammount{
+    color: #B80f0f;
   }
 }
 
@@ -337,12 +397,6 @@ span.stripe{
     background-size: contain;
     margin-right: 1rem;
   }
-  .s-fb {
-    background: url('S-FB.svg') center no-repeat;
-  }
-  .s-twt {
-    background: url('S-TWEET.svg') center no-repeat;
-  }
 }
 // End Site Content
 
@@ -351,6 +405,12 @@ span.stripe{
 .form-field {
   margin-top: 0px;
   margin-bottom: 15px;
+}
+.button-form{
+  background: transparent;
+  border: 1px solid #B80f0f;
+  padding: 0.5rem 1rem;
+  color: #B80f0f;
 }
 
 .login {
@@ -361,7 +421,33 @@ span.stripe{
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 4px double #000;
+    color: #3b3b3b;
   }
+  .button-form{
+    width: 100%;
+    background-color: #B80f0f;
+    color: white;
+  }
+  small{
+    font-style: italic;
+    font-size: 60%;
+  }
+  p{  
+    font-size: .9rem;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    a{
+      font-weight: bold;
+    }
+    b{
+      a{
+        color: #B80f0f;
+      }
+    }
+  }
+
 }
 
 .wizard > .actions {
@@ -430,10 +516,10 @@ span.stripe{
 .social-share-button-twitter{
     width: 26px;
     height: 23px;
-    background: url('S-TWEET.svg') center no-repeat;
+    background: url('/assets/S-TWEET.svg') center no-repeat;
 }
 .social-share-button-facebook{
     width: 26px;
     height: 23px;
-    background: url('S-FB.svg') center no-repeat;
+    background: url('/assets/S-FB.svg') center no-repeat;
 }

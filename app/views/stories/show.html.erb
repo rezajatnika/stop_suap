@@ -1,7 +1,7 @@
 <div class="container story-detail">
   <div class="row">
     <h3><%= @story.title %></h3>
-    <small>Diposting pada <%= @story.created_at.strftime('%e %B, %Y') %> di <%= @story.location.city.name %></small>
+    <small>Diposting pada <%= @story.created_at.strftime('%e %B, %Y') %></small>
     <div class="columns medium-5 medium-offset-2 border-right-double story-detail">
       <div class="content_container">
         <%= @story.content %>
@@ -9,7 +9,7 @@
     </div>
     <div class="columns medium-3 float-left text-center">
       <h5 class="subheader"><%= @story.category.name %></h5>
-      <h3><%= number_to_currency(@story.amount, unit: 'Rp ', precision: 0) %></h3>
+      <h3 class = "story-index-ammount" <%= "id = notpaid" if @story.notpaid? %> ><%= number_to_currency(@story.amount, unit: 'Rp ', precision: 0) %></h3>
       <p class="subheader"><%= "#{@story.story_province}, #{@story.story_city}" %></p>
       <%= social_share_button_tag(@story.title, popup: true) %>
     </div>

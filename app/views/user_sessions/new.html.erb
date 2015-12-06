@@ -15,14 +15,14 @@
           <%= f.check_box :remember_me %>
           <%= f.label :remember_me do %>
             Remember me &middot;
-            <b><%= link_to 'Forgot password?', '#' %></b>
           <% end %>
         </div>
 
-        <%= f.submit 'Login', :class => 'button large float-center' %>
+        <%= f.submit 'Masuk', :class => 'button-form large float-center' %>
       <% end %>
       <hr>
-      <p>New to Stop Suap? <b><%= link_to 'Sign up here!', signup_path %></b></p>
+      <p><%= link_to 'Lupa Password?', '#' %></p>
+      <p>Belum Bergabung? <b><%= link_to 'Daftar StopSuap', signup_path %></b></p>
     </div>
   </div>
 </div>

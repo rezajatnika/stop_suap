@@ -1,9 +1,9 @@
 <%= form_for [@story, Comment.new], remote: true, html: { class: 'new_comment', id: 'new_comment' } do |f| %>
   <div class="form-field">
-    <%= f.text_area :body, required: true %>
+    <%= f.text_area :body, required: true, rows: 5%>
   </div>
 
   <div class="form-field">
-    <%= f.submit 'submit', class: 'button' %>
+    <%= f.submit 'submit', class: 'button-form' %>
   </div>
 <% end %>

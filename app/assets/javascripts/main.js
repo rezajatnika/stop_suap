@@ -31,7 +31,6 @@ $(document).trigger('refresh_autonumeric')
 // Posting Comment AJAX
 $(document).on('ready page:load', function() {
   return $('#new_comment').on('ajax:success', function(e, data, status, xhr) {
-    $('#new_comment').append('comment posted');
     return $('#new_comment #comment_body').val('');
   }).on('ajax:error', function(e, xhr, status, error) {
     return $('#new_comment').append('<p>ERROR</p>');
@@ -46,3 +45,6 @@ $('#story_location_attributes_city_id').select2();
 // $(function() {
 //   filterCityList();
 // });
+
+
+

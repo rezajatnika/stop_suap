@@ -1,7 +1,7 @@
-<div class="story">
-  <small>Commented by <%= comment.user.email %> on <%= comment.created_at.strftime('%e %B, %Y') %></small>
-  <p class="story-label">
+<div class="comment">
+  <p class="comment-label">
     <%= comment.body %>
   </p>
+  <small>Commented by <%= comment.user.email %> on <%= comment.created_at.strftime('%e %B, %Y') %></small>
 </div>
 <hr>

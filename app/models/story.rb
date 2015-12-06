@@ -1,5 +1,5 @@
 class Story < ActiveRecord::Base
-  before_validation :set_email, :set_user, :set_name
+  before_validation :set_email, :set_user, :set_name, :generate_slug
 
   # Associations
   has_one :location
@@ -32,6 +32,10 @@ class Story < ActiveRecord::Base
     location.city.name
   end
 
+  def to_param
+    slug
+  end
+
   private
 
   def set_user
@@ -44,5 +48,9 @@ class Story < ActiveRecord::Base
 
   def set_name
     self.name ||= self.user.name
+  end
+
+  def generate_slug
+    self.slug ||= title.parameterize
   end
 end

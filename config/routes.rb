@@ -13,8 +13,8 @@ Rails.application.routes.draw do
 
   # Resources
   resources :stories, only: [:new, :create, :show, :index] do
-    resource :location, only: [:create]
-    resources :comments, only: :create
+    resource  :location, only: [:create]
+    resources :comments, only: [:create]
   end
 
   resources :contacts, only: [:new, :create]
@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'map_data', to: 'locations#map_data'
+      get 'pie_data', to: 'locations#pie_data'
+      get 'province_data', to: 'locations#province_data'
     end
   end
 

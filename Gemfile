@@ -10,10 +10,10 @@ gem 'turbolinks',        '2.5.3'
 gem 'authlogic',         '3.4.6'
 gem 'bcrypt',            '3.1.10'
 gem 'autonumeric-rails', '1.9.39'
-gem 'carmen',            '1.0.2'
 gem 'ransack',           '1.7.0'
+gem 'faker',             '1.6.1'
+gem 'will_paginate',     '3.0.6'
 gem 'social-share-button'
-gem 'will_paginate',     '~> 3.0.6'
 
 group :doc do
   gem 'sdoc', '0.4.1'
@@ -32,11 +32,11 @@ group :development do
   gem 'thin',          '1.6.4'
   gem 'hirb',          '0.7.3'
   gem 'quiet_assets',  '1.1.0'
-  gem 'faker',         '1.6.1'
 end
 
 group :production do
   gem 'rails_12factor', '0.0.3'
+  gem 'puma',           '2.15.3'
 end
 
 # Ruby version
